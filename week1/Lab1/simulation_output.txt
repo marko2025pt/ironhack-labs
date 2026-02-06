@@ -1,0 +1,101 @@
+=== Simulation Test: HOME Mode ===
+==================================================
+=== HomeGuard Security System ===
+==================================================
+Mode: HOME
+
+
+Time: 15:04:04
+[READING] Living Room Motion: DETECTED
+[READING] Kitchen Temperature: 61.4°F (Normal)
+[READING] Front Door Door: closed
+[READING] Bedroom Smoke: 9.8 (Abnormal)
+[ALERT - HIGH] SMOKE_001: Smoke detected!
+[LOG] Sending notification to homeowner...
+
+Time: 15:04:05
+[READING] Living Room Motion: No activity
+[READING] Kitchen Temperature: 70.7°F (Normal)
+[READING] Front Door Door: open
+[READING] Bedroom Smoke: 0.4 (Normal)
+
+Time: 15:04:06
+[READING] Living Room Motion: No activity
+[READING] Kitchen Temperature: 65.2°F (Normal)
+[READING] Front Door Door: open
+[READING] Bedroom Smoke: 1.5 (Normal)
+
+==================================================
+Simulation complete!
+==================================================
+
+=== Simulation Test: AWAY Mode ===
+==================================================
+=== HomeGuard Security System ===
+==================================================
+Mode: AWAY
+
+
+Time: 15:04:07
+[READING] Living Room Motion: No activity
+[READING] Kitchen Temperature: 72.5°F (Normal)
+[READING] Front Door Door: closed
+[READING] Bedroom Smoke: 6.8 (Abnormal)
+[ALERT - HIGH] SMOKE_001: Smoke detected!
+[LOG] Sending notification to homeowner...
+
+Time: 15:04:08
+[READING] Living Room Motion: DETECTED
+[ALERT - CRITICAL] MOTION_001: Motion detected while away!
+[LOG] Sending notification to homeowner...
+[READING] Kitchen Temperature: 61.0°F (Normal)
+[READING] Front Door Door: open
+[READING] Bedroom Smoke: 1.4 (Normal)
+
+Time: 15:04:09
+[READING] Living Room Motion: DETECTED
+[ALERT - CRITICAL] MOTION_001: Motion detected while away!
+[LOG] Sending notification to homeowner...
+[READING] Kitchen Temperature: 75.0°F (Abnormal)
+[ALERT - MEDIUM] TEMP_001: High temperature!
+[READING] Front Door Door: closed
+[READING] Bedroom Smoke: 4.9 (Normal)
+
+==================================================
+Simulation complete!
+==================================================
+
+=== Simulation Test: SLEEP Mode ===
+==================================================
+=== HomeGuard Security System ===
+==================================================
+Mode: SLEEP
+
+
+Time: 15:04:10
+[READING] Living Room Motion: DETECTED
+[READING] Kitchen Temperature: 69.8°F (Normal)
+[READING] Front Door Door: open
+[READING] Bedroom Smoke: 7.3 (Abnormal)
+[ALERT - HIGH] SMOKE_001: Smoke detected!
+[LOG] Sending notification to homeowner...
+
+Time: 15:04:11
+[READING] Living Room Motion: DETECTED
+[READING] Kitchen Temperature: 64.9°F (Normal)
+[READING] Front Door Door: open
+[READING] Bedroom Smoke: 8.6 (Abnormal)
+[ALERT - HIGH] SMOKE_001: Smoke detected!
+[LOG] Sending notification to homeowner...
+
+Time: 15:04:12
+[READING] Living Room Motion: DETECTED
+[READING] Kitchen Temperature: 66.4°F (Normal)
+[READING] Front Door Door: closed
+[READING] Bedroom Smoke: 9.7 (Abnormal)
+[ALERT - HIGH] SMOKE_001: Smoke detected!
+[LOG] Sending notification to homeowner...
+
+==================================================
+Simulation complete!
+==================================================
