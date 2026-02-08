@@ -1,0 +1,36 @@
+# Lab 5 Report: Product Listing Generation with ChatGPT Vision API
+
+## 1. API Integration
+
+The integration uses the OpenAI ChatGPT API with vision capabilities. For each product, the workflow is:
+
+1. **Prepare the prompt** using product metadata (name, price, category, color, season) with the `create_product_listing_prompt()` function.
+2. **Encode the product image** in base64 format so it can be transmitted alongside the text prompt.
+3. **Send the request** to the `gpt-4.1-mini` model, including both the prompt and the encoded image.
+4. **Receive a structured JSON response** containing the product title, description, key features, and SEO keywords.
+5. **Save the output** into individual JSON files and optionally print a human-readable summary.
+
+## 2. Challenges Faced
+
+- **Handling images in API requests**: Initially, the API expected `image_url` instead of `image_data` or `image_base64`, requiring adjustments to send local images in a compatible format.
+- **Base64 encoding**: Ensuring all images were correctly encoded from PIL.Image objects without corrupting data.
+- **Multiple product processing**: Looping through multiple products while handling API errors gracefully.
+- **Jupyter quirks**: Kernel timeout and visualization issues occurred with large datasets, which required limiting the number of displayed images during verification.
+
+## 3. Quality of Generated Listings
+
+- The listings were **highly descriptive and structured**, with coherent titles, detailed descriptions, and relevant SEO keywords.
+- Features included **accurate reference to colors, materials, and design elements** visible in the images.
+- The JSON structure allowed for **easy programmatic handling** and further integration into e-commerce platforms.
+
+## 4. Potential Improvements
+
+- **Batch API calls**: Reduce runtime by processing multiple products simultaneously if supported.
+- **Refined prompts**: Include more product-specific attributes or style guidelines to improve brand consistency.
+- **Automated logging**: Capture all outputs, including images and text previews, in a single comprehensive report file.
+- **Error handling enhancements**: Retry failed API calls automatically to avoid missing products.
+- **Integration with live dataset**: Pull images directly from the e-commerce platform to skip manual download/encoding steps.
+
+---
+
+Overall, the lab successfully demonstrated **text + image prompt handling**, **structured API responses**, and the ability to generate **high-quality product listings** with minimal manual effort.
