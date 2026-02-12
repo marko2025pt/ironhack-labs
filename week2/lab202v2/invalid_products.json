@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "P100",
+      "name": "Invalid Negative Price",
+      "category": "Electronics",
+      "price": -10.99,
+      "features": [
+        "Feature A"
+      ]
+    },
+    {
+      "id": "P101",
+      "category": "Accessories",
+      "price": 29.99,
+      "features": [
+        "Compact"
+      ]
+    },
+    {
+      "name": "Missing ID Product",
+      "category": "Wearables",
+      "price": 59.99,
+      "features": [
+        "Lightweight"
+      ]
+    },
+    {
+      "id": "P103",
+      "name": "Wrong Type Price",
+      "category": "Electronics",
+      "price": "expensive",
+      "features": "Portable"
+    }
+  ]
+}

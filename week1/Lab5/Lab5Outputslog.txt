@@ -1,0 +1,262 @@
+#LAB 5 Outputs
+
+##STEP 2
+c:\Users\marco\miniconda3\envs\ironhack-labs-env\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+Loading product dataset...
+c:\Users\marco\miniconda3\envs\ironhack-labs-env\Lib\site-packages\huggingface_hub\file_download.py:130: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\marco\.cache\huggingface\hub\datasets--ashraq--fashion-product-images-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split: 100%|██████████| 44072/44072 [00:04<00:00, 9050.94 examples/s] 
+✓ Loaded 100 products
+Dataset columns: ['id', 'gender', 'masterCategory', 'subCategory', 'articleType', 'baseColour', 'season', 'year', 'usage', 'productDisplayName', 'image']
+
+✓ Dataset prepared!
+Total products: 100
+
+STEP 2 VERIFICATION
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>gender</th>
+      <th>masterCategory</th>
+      <th>subCategory</th>
+      <th>articleType</th>
+      <th>baseColour</th>
+      <th>season</th>
+      <th>year</th>
+      <th>usage</th>
+      <th>productDisplayName</th>
+      <th>image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>15970</td>
+      <td>Men</td>
+      <td>Apparel</td>
+      <td>Topwear</td>
+      <td>Shirts</td>
+      <td>Navy Blue</td>
+      <td>Fall</td>
+      <td>2011.0</td>
+      <td>Casual</td>
+      <td>Turtle Check Men Navy Blue Shirt</td>
+      <td>&lt;PIL.JpegImagePlugin.JpegImageFile image mode=...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39386</td>
+      <td>Men</td>
+      <td>Apparel</td>
+      <td>Bottomwear</td>
+      <td>Jeans</td>
+      <td>Blue</td>
+      <td>Summer</td>
+      <td>2012.0</td>
+      <td>Casual</td>
+      <td>Peter England Men Party Blue Jeans</td>
+      <td>&lt;PIL.JpegImagePlugin.JpegImageFile image mode=...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59263</td>
+      <td>Women</td>
+      <td>Accessories</td>
+      <td>Watches</td>
+      <td>Watches</td>
+      <td>Silver</td>
+      <td>Winter</td>
+      <td>2016.0</td>
+      <td>Casual</td>
+      <td>Titan Women Silver Watch</td>
+      <td>&lt;PIL.Image.Image image mode=L size=60x80 at 0x...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>21379</td>
+      <td>Men</td>
+      <td>Apparel</td>
+      <td>Bottomwear</td>
+      <td>Track Pants</td>
+      <td>Black</td>
+      <td>Fall</td>
+      <td>2011.0</td>
+      <td>Casual</td>
+      <td>Manchester United Men Solid Black Track Pants</td>
+      <td>&lt;PIL.JpegImagePlugin.JpegImageFile image mode=...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>53759</td>
+      <td>Men</td>
+      <td>Apparel</td>
+      <td>Topwear</td>
+      <td>Tshirts</td>
+      <td>Grey</td>
+      <td>Summer</td>
+      <td>2012.0</td>
+      <td>Casual</td>
+      <td>Puma Men Grey T-shirt</td>
+      <td>&lt;PIL.Image.Image image mode=RGB size=60x80 at ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+Displaying first 5 product images:
+1. Turtle Check Men Navy Blue Shirt
+
+[SHOW PICTURE]
+
+(...)
+
+##STEP 3 Encoding Images
+
+✓ All product images encoded to base64.
+
+Verifying first 5 images:
+1. Base64 length: 2388 characters
+
+[SHOW PICTURE]
+
+(...)
+
+##STEP 4 Create Prompt
+
+==================================================
+PROMPT TEMPLATE
+==================================================
+You are an expert e-commerce copywriter. Analyze the product image and create a compelling product listing.
+
+Product Information:
+- Name: Wireless Bluetooth Headphones
+- Price: $79.99
+- Category: Electronics
+- Additional Info: Noise cancelling, 30-hour battery
+
+Please create a professional product listing that includes:
+
+1. **Product Title** (catchy, SEO-friendly, 60 characters max)
+2. **Product Description** (detailed, 150-200 words)
+   - Highlight key features and benefits
+   - Use persuasive language
+   - Include relevant details visible in the image
+3. **Key Features** (bullet points, 5-7 items)
+4. **SEO Keywords** (comma-separated, 10-15 relevant keywords)
+
+Format your response as JSON with the following structure:
+{
+    "title": "Product title here",
+    "description": "Full description here",
+    "features": ["Feature 1", "Feature 2", ...],
+    "keywords": "keyword1, keyword2, ..."
+}
+
+Be specific about what you see in the image. Mention colors, materials, design elements, and any distinctive features....
+
+##STEP 5 Calling the Chat API
+✓ Product listing generated successfully!
+
+{
+    "title": "Turtle Check Men Navy Blue Shirt - Stylish Fall Wear",
+    "description": "Elevate your casual wardrobe with the Turtle Check Men Navy Blue Shirt, designed to offer both comfort and style for the fall season. This shirt showcases an eye-catching checkered pattern in navy blue and white, providing a versatile look perfect for both office and weekend outings. Crafted from lightweight, breathable fabric, it ensures all-day comfort no matter the occasion. Featuring a classic collar, full button-down front, and long sleeves with buttoned cuffs, this shirt combines timeless design with modern fit. The slim silhouette enhances your shape without compromising ease of movement. Pair it effortlessly with jeans or chinos for a polished yet relaxed appearance. Whether layered under a jacket or worn alone, this check shirt is a must-have addition to your fall wardrobe.",
+    "features": [
+        "Classic navy blue and white checkered pattern",
+        "Lightweight, breathable fabric for comfort",
+        "Full button-down front with classic collar",
+        "Long sleeves with buttoned cuffs",
+        "Slim fit for a modern look",
+        "Ideal for fall season wear",
+        "Versatile style for casual and semi-formal occasions"
+    ],
+    "keywords": "men's navy blue shirt, checkered shirt men, fall shirts men, casual shirts for men, slim fit shirts, button-down shirt men, long sleeve shirt men, lightweight men's shirt, office casual shirt, stylish men's shirts, men's autumn wear, Turtle Check shirt, men's topwear, check pattern shirt"
+}
+
+✓ Product listing saved to ProductDescription1.json
+
+##STEP 6 Processing Multiple Products
+
+=== Product 2 Listing ===
+TITLE:
+Peter England Men Party Blue Jeans - Stylish Summer Wear
+
+DESCRIPTION:
+Step out in style with the Peter England Men Party Blue Jeans, designed to elevate your summer wardrobe. Crafted from high-quality denim, these jeans offer a perfect blend of comfort and durability. The rich blue hue adds a classic yet trendy touch, making them ideal for casual and party occasions. Featuring a slim fit design, they contour to your legs for a sharp and modern look. The jeans include classic five-pocket styling and detailed stitching that enhances their visual appeal. Lightweight and breathable, they are perfect for warmer weather, providing unrestricted movement without compromising on style. Whether paired with a casual shirt or a trendy tee, these jeans guarantee a sleek and confident appearance. Upgrade your bottomwear collection with these versatile Peter England jeans designed to keep you comfortable and stylish all summer long.
+
+FEATURES:
+- Premium quality blue denim material
+- Slim fit for a modern silhouette
+- Classic five-pocket design
+- Detailed stitching for enhanced style
+- Lightweight and breathable fabric
+- Ideal for summer and party wear
+- Durable construction for long-lasting use
+
+KEYWORDS:
+Peter England jeans, men's blue jeans, slim fit jeans, summer jeans, party wear jeans, casual denim, men's bottomwear, breathable jeans, stylish men's jeans, durable denim pants, trendy jeans for men, lightweight jeans, classic blue jeans, men's party clothing
+
+✓ Saved to ProductDescription2.json
+
+=== Product 3 Listing ===
+TITLE:
+Titan Women Silver Watch - Elegant Winter Accessory
+
+DESCRIPTION:
+Elevate your style this winter with the Titan Women Silver Watch, a perfect blend of elegance and functionality. This sleek timepiece features a stunning silver-tone stainless steel mesh strap, ensuring both comfort and durability. The round dial is minimalist yet sophisticated, with a clean white face accented by slender silver hour markers and hands for easy readability. The watch’s polished finish and subtle details make it an ideal accessory for both casual and formal winter wear. Lightweight and designed for everyday use, this watch complements any outfit while adding a touch of refined charm. Make a stylish statement with Titan's timeless design crafted to suit your unique taste.
+
+FEATURES:
+- Elegant silver-tone stainless steel mesh strap
+- Minimalist white dial with silver hour markers and hands
+- Durable and comfortable for daily wear
+- Round dial with polished finish for a refined look
+- Lightweight and perfect for winter styling
+- Precise quartz movement for accurate timekeeping
+- Versatile design suitable for casual and formal occasions
+
+KEYWORDS:
+Titan women watch, silver watch, women's stainless steel watch, winter watch, elegant women's accessory, minimalist watch, silver dial watch, quartz movement watch, ladies silver wristwatch, comfortable women's watch, formal watch for women, casual stylish watch, stainless steel mesh strap watch
+
+✓ Saved to ProductDescription3.json
+
+=== Product 4 Listing ===
+TITLE:
+Manchester United Men Black Solid Track Pants - Fall Wear
+
+DESCRIPTION:
+Elevate your casual and sportswear wardrobe with the Manchester United Men Solid Black Track Pants. Crafted for comfort and style, these track pants feature a sleek black color that perfectly complements your everyday look. The pants are designed with a tapered fit and cuffed ankles, ensuring a modern silhouette that stays in place during your activities. Made from high-quality fabric, these pants provide breathable comfort for fall season wear. Iconic Manchester United branding on the left thigh adds a touch of fandom and authenticity to your outfit. Whether you're hitting the gym, running errands, or relaxing at home, these track pants combine functionality with a sporty edge. Equipped with side pockets, they offer practical storage for essentials. Show your support for Manchester United while enjoying unmatched comfort and style throughout the season.
+
+FEATURES:
+- Solid black color for versatile styling
+- Tapered fit with cuffed ankles for a modern look
+- Soft, breathable fabric perfect for fall season
+- Official Manchester United logo on left thigh
+- Elastic waistband with adjustable drawstring for secure fit
+- Side pockets for convenient storage
+- Ideal for casual wear, workouts, and relaxed outings
+
+KEYWORDS:
+Manchester United track pants, men’s black track pants, fall track pants, sportswear bottoms, tapered track pants, athletic wear men, football club apparel, breathable track pants, casual trackpants, cuffed ankle pants, adjustable waistband pants, Manchester United merchandise, soccer track pants men
+
+✓ Saved to ProductDescription4.json
+
+✓ Step 6 completed: Multiple products processed.

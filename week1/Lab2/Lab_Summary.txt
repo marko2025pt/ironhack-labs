@@ -1,0 +1,14 @@
+## Engineered Features Summary
+
+## Which engineered features I created
+
+I created several engineered features: **FamilySize** (total family members aboard), **IsAlone** (whether the passenger is traveling alone), **AgeGroup** (categorizing passengers by age), **HasCabin** (whether a cabin was assigned), **FarePerPerson** (the ticket fare divided by the number of people in the passenger's group), and **Title** (extracted from the passenger's name). Additionally, I handled missing data by replacing missing **Age** values with the median age.
+
+## How these features help differentiate between survivors and non-survivors
+
+These features highlight social, demographic, and travel-related patterns—for example, passengers traveling alone, children, women, or those with certain titles had different survival rates. Passengers in cabins or paying higher fare per person also showed distinct survival patterns. Filling missing age values ensures that age-based analysis is consistent and accurate.
+
+## What I learned about using classes for data processing
+
+Using **classes** allowed me to structure each passenger as an object and encapsulate all related logic within the TitanicDataset class. This made it straightforward to compute comprehensive statistics, handle engineered features consistently, and export everything to JSON while keeping the code organized, reusable, and easier to maintain.
+

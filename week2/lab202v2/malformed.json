@@ -1,0 +1,12 @@
+
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Broken Product",
+      "category": "Electronics",
+      "price": 99.99,
+      "features": ["Feature A", "Feature B"]
+    }
+  ]   // <-- Invalid comment in JSON
+}

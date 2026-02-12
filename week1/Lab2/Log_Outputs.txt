@@ -1,0 +1,239 @@
+Log Outputs
+
+##STEP 1
+Project setup complete!
+Data directory: data
+CSV file location: data\titanic.csv
+---
+
+##STEP 2
+Dataset loaded successfully! Shape: (891, 12)
+
+Columns: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+
+First few rows of the dataset:
+   PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+---
+
+##STEP 3
+Descriptive Statistics for Numeric Columns:
+                   mean    median         std
+PassengerId  446.000000  446.0000  257.353842
+Survived       0.383838    0.0000    0.486592
+Pclass         2.308642    3.0000    0.836071
+Age           29.699118   28.0000   14.526497
+SibSp          0.523008    0.0000    1.102743
+Parch          0.381594    0.0000    0.806057
+Fare          32.204208   14.4542   49.693429
+---
+
+## STEP 4
+==================================================
+MISSING VALUES ANALYSIS
+==================================================
+PassengerId: 0 missing (0.00%)
+Survived: 0 missing (0.00%)
+Pclass: 0 missing (0.00%)
+Name: 0 missing (0.00%)
+Sex: 0 missing (0.00%)
+Age: 177 missing (19.87%)
+SibSp: 0 missing (0.00%)
+Parch: 0 missing (0.00%)
+Ticket: 0 missing (0.00%)
+Fare: 0 missing (0.00%)
+Cabin: 687 missing (77.10%)
+Embarked: 2 missing (0.22%)
+---
+
+## STEP 5
+SibSp  Parch  FamilySize
+0      1      0           2
+1      1      0           2
+2      0      0           1
+3      1      0           2
+4      0      0           1
+5      0      0           1
+6      0      0           1
+7      3      1           5
+8      0      2           3
+9      1      0           2
+   FamilySize  IsAlone
+0           2        0
+1           2        0
+2           1        1
+3           2        0
+4           1        1
+5           1        1
+6           1        1
+7           5        0
+8           3        0
+9           2        0
+    Age     AgeGroup
+0  22.0  Young Adult
+1  38.0        Adult
+2  26.0  Young Adult
+3  35.0        Adult
+4  35.0        Adult
+5   NaN      Unknown
+6  54.0       Senior
+7   2.0        Child
+8  27.0  Young Adult
+9  14.0        Child
+
+==================================================
+FEATURE ANALYSIS: SURVIVED vs NOT SURVIVED
+==================================================
+
+Family Size by Survival:
+              mean  median       std
+Survived                            
+0         1.883424     1.0  1.830669
+1         1.938596     2.0  1.186076
+
+==================================================
+FEATURE DIFFERENTIATION ANALYSIS
+==================================================
+
+Family Size:
+  Survived mean: 1.94
+  Not Survived mean: 1.88
+  Difference: 0.06
+---
+
+## STEP 5.1
+Updated missing data handling:
+    Age     AgeGroup Cabin  HasCabin
+0  22.0  Young Adult   NaN         0
+1  38.0        Adult   C85         1
+2  26.0  Young Adult   NaN         0
+3  35.0        Adult  C123         1
+4  35.0        Adult   NaN         0
+5  28.0  Young Adult   NaN         0
+6  54.0       Senior   E46         1
+7   2.0        Child   NaN         0
+8  27.0  Young Adult   NaN         0
+9  14.0        Child   NaN         0
+
+Missing ages after imputation: 0
+
+HasCabin feature counts:
+HasCabin
+0    687
+1    204
+Name: count, dtype: int64
+---
+
+## STEP 5.2
+Fare  FamilySize  FarePerPerson
+0   7.2500           2        3.62500
+1  71.2833           2       35.64165
+2   7.9250           1        7.92500
+3  53.1000           2       26.55000
+4   8.0500           1        8.05000
+5   8.4583           1        8.45830
+6  51.8625           1       51.86250
+7  21.0750           5        4.21500
+8  11.1333           3        3.71110
+9  30.0708           2       15.03540
+---
+
+## STEP 6
+Name   Title
+0                            Braund, Mr. Owen Harris      Mr
+1  Cumings, Mrs. John Bradley (Florence Briggs Th...     Mrs
+2                             Heikkinen, Miss. Laina    Miss
+3       Futrelle, Mrs. Jacques Heath (Lily May Peel)     Mrs
+4                           Allen, Mr. William Henry      Mr
+5                                   Moran, Mr. James      Mr
+6                            McCarthy, Mr. Timothy J      Mr
+7                     Palsson, Master. Gosta Leonard  Master
+8  Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)     Mrs
+9                Nasser, Mrs. Nicholas (Adele Achem)     Mrs
+
+Title counts:
+Title
+Mr          517
+Miss        185
+Mrs         126
+Master       40
+Dr            7
+Rev           6
+Major         2
+Col           2
+Don           1
+Lady          1
+Sir           1
+Capt          1
+Other         1
+Jonkheer      1
+Name: count, dtype: int64
+---
+
+STEP 6:
+Total passengers: 891
+
+Summary Statistics:
+Total Survived: 342
+Total Did Not Survive: 549
+Average Age: 29.36
+Average Fare: 32.2
+Average Fare Per Person: 19.92
+
+=== Survival by Sex ===
+Male: 109/577 survived (18.89% of males, 12.23% of total)
+Female: 233/314 survived (74.2% of females, 26.15% of total)
+
+=== Survival by Age Group ===
+Young Adult: 147/448 survived (32.81% of group, 16.5% of total)
+Adult: 107/256 survived (41.8% of group, 12.01% of total)
+Senior: 27/74 survived (36.49% of group, 3.03% of total)
+Child: 61/113 survived (53.98% of group, 6.85% of total)
+Data exported to data\titanic_data.json
+---
+
+STEP 7:
+=== METADATA ===
+dataset_name: Titanic Passenger Dataset
+export_date: 2026-02-06T20:51:42.574743
+total_passengers: 891
+survival_rate: 38.38
+
+Total passengers in JSON: 891
+
+=== REQUIRED FIELDS CHECK ===
+Passenger 61 missing fields: ['embarked']
+Passenger 829 missing fields: ['embarked']
+
+=== ENGINEERED FEATURES CHECK ===
+All passengers have all engineered features.
+
+=== ENGINEERED FEATURE COUNTS ===
+Has Cabin: 204 (22.90%)
+No Cabin: 687 (77.10%)
+Is Alone: 537 (60.27%)
+Not Alone: 354 (39.73%)
+
+=== SUMMARY STATISTICS ===
+Total Survived: 342
+Total Did Not Survive: 549
+Average Age: 29.36
+Average Fare: 32.2
+Average Fare Per Person: 19.92
+
+--- Survival by Sex ---
+Male: 109/577 survived (18.89% of males, 12.23% of total)
+Female: 233/314 survived (74.2% of females, 26.15% of total)
+
+--- Survival by Age Group ---
+Young Adult: 147/448 survived (32.81% of group, 16.50% of total)
+Adult: 107/256 survived (41.80% of group, 12.01% of total)
+Senior: 27/74 survived (36.49% of group, 3.03% of total)
+Child: 61/113 survived (53.98% of group, 6.85% of total)
+
+JSON is valid and can be parsed successfully!
+

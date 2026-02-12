@@ -1,0 +1,197 @@
+
+2026-02-12 17:16:20,212 - INFO - ==========================================
+2026-02-12 17:16:20,212 - INFO - INTEGRATION TEST — VALID JSON
+2026-02-12 17:16:20,213 - INFO - ==========================================
+2026-02-12 17:16:58,213 - INFO - Successfully processed 3 product(s).
+2026-02-12 17:16:58,213 - INFO - TEST RESULT: SUCCESS
+2026-02-12 17:19:57,997 - INFO - ==========================================
+2026-02-12 17:19:57,998 - INFO - INTEGRATION TEST — FILE NOT FOUND
+2026-02-12 17:19:57,998 - INFO - ==========================================
+2026-02-12 17:19:58,712 - INFO - ERROR in load_json_file(): FileNotFoundError
+  Location: File 'missing_file.json' not found
+  Message: [Errno 2] No such file or directory: 'missing_file.json'
+  Suggestion: Check that the file path is correct (Current directory: c:\Users\marco\ironhack-labs\week2\lab202v2)
+ERROR in load_and_validate_products(): FileNotFoundError
+  Location: File 'missing_file.json'
+  Message: [Errno 2] No such file or directory: 'missing_file.json'
+  Suggestion: Verify JSON structure and product schema
+2026-02-12 17:19:58,712 - INFO - TEST RESULT: SUCCESS — Caught FileNotFoundError
+2026-02-12 17:20:34,468 - INFO - ==========================================
+2026-02-12 17:20:34,469 - INFO - INTEGRATION TEST — INVALID JSON
+2026-02-12 17:20:34,470 - INFO - ==========================================
+2026-02-12 17:20:35,118 - INFO - ERROR in load_json_file(): JSONDecodeError
+  Location: File 'malformed.json', line 11, column 7
+  Message: Expecting ',' delimiter
+  Suggestion: Check JSON syntax at line 11
+ERROR in load_and_validate_products(): JSONDecodeError
+  Location: File 'malformed.json'
+  Message: Expecting ',' delimiter: line 11 column 7 (char 189)
+  Suggestion: Verify JSON structure and product schema
+2026-02-12 17:20:35,118 - INFO - TEST RESULT: SUCCESS — Caught JSONDecodeError
+2026-02-12 17:21:12,648 - INFO - ==========================================
+2026-02-12 17:21:12,648 - INFO - INTEGRATION TEST — INVALID PRODUCT DATA
+2026-02-12 17:21:12,648 - INFO - ==========================================
+2026-02-12 17:21:13,576 - INFO - ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P100'
+  Message: price: Value error, Price must be positive
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 1
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P101'
+  Message: name: Field required
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 2
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'unknown'
+  Message: id: Field required
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 3
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P103'
+  Message: price: Input should be a valid number, unable to parse string as a number; features: Input should be a valid list
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 4
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+No valid products to process.
+2026-02-12 17:21:13,576 - INFO - TEST RESULT: SUCCESS
+2026-02-12 17:25:55,072 - INFO - ==========================================
+2026-02-12 17:25:55,073 - INFO - INTEGRATION TEST — API ERROR
+2026-02-12 17:25:55,074 - INFO - ==========================================
+2026-02-12 17:25:55,080 - INFO - ==========================================
+2026-02-12 17:25:55,080 - INFO - INTEGRATION TEST — API ERROR
+2026-02-12 17:25:55,080 - INFO - ==========================================
+2026-02-12 17:25:56,402 - INFO - ERROR in generate_description(): AuthenticationError
+  Location: Product 'Wireless Bluetooth Headphones' (ID: P001)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Wireless Bluetooth Headphones' (ID: P001)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+ERROR in generate_description(): AuthenticationError
+  Location: Product 'Smart Watch' (ID: P002)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Smart Watch' (ID: P002)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+ERROR in generate_description(): AuthenticationError
+  Location: Product 'Laptop Stand' (ID: P003)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Laptop Stand' (ID: P003)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+Successfully processed 0 product(s).
+2026-02-12 17:25:56,402 - INFO - TEST RESULT: SUCCESS
+2026-02-12 17:55:26,996 - INFO - ==========================================
+2026-02-12 17:55:27,000 - INFO - INTEGRATION TEST — VALID JSON
+2026-02-12 17:55:27,000 - INFO - ==========================================
+2026-02-12 17:55:58,141 - INFO - Successfully processed 3 product(s).
+2026-02-12 17:55:58,141 - INFO - TEST RESULT: SUCCESS
+2026-02-12 17:55:58,168 - INFO - ==========================================
+2026-02-12 17:55:58,170 - INFO - INTEGRATION TEST — FILE NOT FOUND
+2026-02-12 17:55:58,170 - INFO - ==========================================
+2026-02-12 17:55:58,758 - INFO - ERROR in load_json_file(): FileNotFoundError
+  Location: File 'missing_file.json' not found
+  Message: [Errno 2] No such file or directory: 'missing_file.json'
+  Suggestion: Verify the file path and ensure the file exists (Current directory: c:\Users\marco\ironhack-labs\week2\lab202v2)
+ERROR in load_and_validate_products(): FileNotFoundError
+  Location: File 'missing_file.json'
+  Message: [Errno 2] No such file or directory: 'missing_file.json'
+  Suggestion: Verify JSON structure and product schema
+2026-02-12 17:55:58,758 - INFO - TEST RESULT: SUCCESS — Caught FileNotFoundError
+2026-02-12 17:55:58,790 - INFO - ==========================================
+2026-02-12 17:55:58,790 - INFO - INTEGRATION TEST — INVALID JSON
+2026-02-12 17:55:58,790 - INFO - ==========================================
+2026-02-12 17:55:59,589 - INFO - ERROR in load_json_file(): JSONDecodeError
+  Location: File 'malformed.json', line 11, column 7
+  Message: Expecting ',' delimiter
+  Suggestion: Fix JSON syntax near line 11
+ERROR in load_and_validate_products(): JSONDecodeError
+  Location: File 'malformed.json'
+  Message: Expecting ',' delimiter: line 11 column 7 (char 189)
+  Suggestion: Verify JSON structure and product schema
+2026-02-12 17:55:59,589 - INFO - TEST RESULT: SUCCESS — Caught JSONDecodeError
+2026-02-12 17:55:59,623 - INFO - ==========================================
+2026-02-12 17:55:59,623 - INFO - INTEGRATION TEST — INVALID PRODUCT DATA
+2026-02-12 17:55:59,624 - INFO - ==========================================
+2026-02-12 17:56:00,416 - INFO - ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P100'
+  Message: price: Value error, Price must be positive
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 1
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P101'
+  Message: name: Field required
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 2
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'unknown'
+  Message: id: Field required
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 3
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+ERROR in validate_product_data(): ValidationError
+  Location: Product ID 'P103'
+  Message: price: Input should be a valid number, unable to parse string as a number; features: Input should be a valid list
+  Suggestion: Fix the invalid fields listed above
+ERROR in load_and_validate_products(): ValidationError
+  Location: File 'invalid_products.json', product index 4
+  Message: Product failed validation and was skipped
+  Suggestion: Review validation errors above for details
+No valid products to process.
+2026-02-12 17:56:00,416 - INFO - TEST RESULT: SUCCESS
+2026-02-12 17:56:00,479 - INFO - ==========================================
+2026-02-12 17:56:00,479 - INFO - INTEGRATION TEST — API ERROR
+2026-02-12 17:56:00,479 - INFO - ==========================================
+2026-02-12 17:56:00,479 - INFO - ==========================================
+2026-02-12 17:56:00,479 - INFO - INTEGRATION TEST — API ERROR
+2026-02-12 17:56:00,479 - INFO - ==========================================
+2026-02-12 17:56:02,034 - INFO - ERROR in generate_description(): AuthenticationError
+  Location: Product 'Wireless Bluetooth Headphones' (ID: P001)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Wireless Bluetooth Headphones' (ID: P001)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+ERROR in generate_description(): AuthenticationError
+  Location: Product 'Smart Watch' (ID: P002)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Smart Watch' (ID: P002)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+ERROR in generate_description(): AuthenticationError
+  Location: Product 'Laptop Stand' (ID: P003)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check API key, rate limits, network connection, or try again later
+ERROR in process_products(): AuthenticationError
+  Location: Product 'Laptop Stand' (ID: P003)
+  Message: Error code: 401 - {'error': {'message': 'Incorrect API key provided: invalid_***********ting. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+  Suggestion: Check product data or API response handling
+Successfully processed 0 product(s).
+2026-02-12 17:56:02,034 - INFO - TEST RESULT: SUCCESS
