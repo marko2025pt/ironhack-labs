@@ -1,0 +1,384 @@
+
+--- Extraction v1 – Zero-Shot Baseline (1 runs) ---
+
+Run 1:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** 12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Exact-Match Consistency: 100.00%
+============================================================
+
+--- Extraction v1 – Zero-Shot Baseline (5 runs) ---
+
+Run 1:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** #12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Run 2:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 3:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 4:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 5:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Exact-Match Consistency: 20.00%
+============================================================
+
+--- Extraction v1 – Zero-Shot Baseline (10 runs) ---
+
+Run 1:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 2:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 3:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 4:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** #12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Run 5:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 6:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 7:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 8:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 9:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** #12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Run 10:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** #12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Exact-Match Consistency: 40.00%
+============================================================
+
+--- Extraction v1 – Zero-Shot Baseline (15 runs) ---
+
+Run 1:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 2:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 3:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** #12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Run 4:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 5:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 6:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 7:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 8:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 9:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 10:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 11:
+Certainly! Here is the extracted information from the customer feedback:
+
+- **Order Number:** 12345
+- **Order Date:** March 15th
+- **Delivery Experience:** Fast
+- **Packaging Condition:** Damaged
+
+Run 12:
+- Order Number: #12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 13:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Run 14:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Experience: Fast  
+- Packaging Condition: Damaged
+
+Run 15:
+- Order Number: 12345  
+- Order Date: March 15th  
+- Delivery Speed: Fast  
+- Packaging Condition: Damaged
+
+Exact-Match Consistency: 40.00%
+============================================================
+
+--- Extraction v1 – Robustness (Complex Input) (15 runs) ---
+
+Run 1:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 2:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** Works fine
+
+Run 3:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 4:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 5:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 6:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 7:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 8:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 9:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** Works fine
+
+Run 10:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** Works fine
+
+Run 11:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 12:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** #78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** Works fine
+
+Run 13:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 14:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** #78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after the order
+- **Delivery Experience:** Faster than expected
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Run 15:
+Here is the extracted information from the customer feedback:
+
+- **Order Number:** 78910
+- **Order Date:** April 2nd
+- **Delivery Time:** Package arrived two days after order placement (faster than expected)
+- **Packaging Condition:** Outer box was torn
+- **Product Packaging Condition:** One corner was slightly crushed
+- **Product Functionality:** The product works fine
+
+Exact-Match Consistency: 40.00%
+============================================================

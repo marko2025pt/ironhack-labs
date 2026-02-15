@@ -1,0 +1,104 @@
+
+--- Sentiment v1 – Zero-Shot Baseline (1 runs) ---
+Run 1: This customer message is a positive product review.
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v1 – Zero-Shot Baseline (5 runs) ---
+Run 1: This customer message is a positive product review and feedback.
+Run 2: This customer message is a positive product review and feedback.
+Run 3: This customer message is a positive product review and feedback.
+Run 4: This customer message is a positive product review.
+Run 5: This customer message is a positive product review and feedback.
+Consistency: 80.00%
+============================================================
+
+--- Sentiment v1 – Zero-Shot Baseline (10 runs) ---
+Run 1: This customer message is a positive product review.
+Run 2: This customer message is a positive product review and feedback.
+Run 3: This customer message can be classified as a positive product review or feedback.
+Run 4: This customer message is a positive product review and feedback.
+Run 5: This customer message can be classified as a **Positive Feedback / Customer Satisfaction**.
+Run 6: This customer message is a positive product review and feedback.
+Run 7: This customer message can be classified as a **Positive Feedback / Customer Satisfaction**.
+Run 8: This customer message is a positive product review and feedback.
+Run 9: This customer message is a positive product review and feedback.
+Run 10: This customer message is a positive product review and feedback.
+Consistency: 60.00%
+============================================================
+
+--- Sentiment v1 – Zero-Shot Baseline (15 runs) ---
+Run 1: This customer message can be classified as a **Positive Feedback / Customer Satisfaction**.
+Run 2: This customer message is a positive product review and feedback.
+Run 3: This customer message is a positive product review and feedback.
+Run 4: This customer message is a positive product review.
+Run 5: This customer message is a positive product review and feedback.
+Run 6: This customer message is a positive product review and feedback.
+Run 7: This customer message is a positive product review and feedback.
+Run 8: This customer message is a positive product review and feedback.
+Run 9: This customer message is a positive product review.
+Run 10: This customer message can be classified as a **Positive Feedback / Customer Satisfaction**.
+Run 11: This customer message is a positive product review.
+Run 12: This customer message is a positive product review and feedback.
+Run 13: This customer message is a positive product review.
+Run 14: This customer message is a positive product review and feedback.
+Run 15: This customer message can be classified as a **Positive Feedback / Customer Satisfaction**.
+Consistency: 53.33%
+============================================================
+
+--- Sentiment v1 – Robustness (Positive) (15 runs) ---
+Run 1: This customer message is a positive review or feedback about their recent purchase.
+Run 2: This customer message is a positive review or feedback about their recent purchase.
+Run 3: This customer message is a positive review or feedback about their recent purchase.
+Run 4: This customer message is a positive review or feedback about their recent purchase.
+Run 5: This customer message is a positive review or feedback about their recent purchase.
+Run 6: This customer message is a positive review or feedback about their recent purchase.
+Run 7: This customer message is a positive review or feedback about their recent purchase.
+Run 8: This customer message is a positive review and feedback about their recent purchase.
+Run 9: This customer message is a positive review or feedback about their recent purchase.
+Run 10: This customer message is a positive review or feedback about their recent purchase.
+Run 11: This customer message is a positive review or feedback about their recent purchase.
+Run 12: This customer message is a positive review or feedback about their recent purchase.
+Run 13: This customer message is a positive review or feedback about their recent purchase.
+Run 14: This customer message is a positive review or feedback about their recent purchase.
+Run 15: This customer message is a positive review or feedback about their recent purchase.
+Consistency: 93.33%
+============================================================
+
+--- Sentiment v1 – Robustness (Negative) (15 runs) ---
+Run 1: The customer message can be classified as a **Product Issue / Complaint**.
+Run 2: The customer message is a complaint regarding the wireless mouse, expressing dissatisfaction with its performance, build quality, battery life, and overall purchase experience.
+Run 3: The customer message can be classified as a **Negative Feedback / Complaint**.
+Run 4: The customer message can be classified as a **Negative Feedback / Complaint**.
+Run 5: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 6: The customer message can be classified as a **Negative Feedback / Complaint**.
+Run 7: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 8: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 9: The customer message is a complaint expressing dissatisfaction with the wireless mouse due to performance issues, build quality, battery life, and overall regret.
+Run 10: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 11: The customer message can be classified as a **Product Issue / Complaint**.
+Run 12: The customer message is a complaint regarding product performance and quality.
+Run 13: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 14: The customer message can be classified as a **Product Complaint / Dissatisfaction**.
+Run 15: The customer message can be classified as a **Negative Feedback / Complaint**.
+Consistency: 40.00%
+============================================================
+
+--- Sentiment v1 – Robustness (Neutral) (15 runs) ---
+Run 1: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 2: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 3: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 4: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 5: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 6: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 7: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 8: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 9: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 10: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 11: This customer message can be classified as a **Neutral Feedback** or **Product Satisfaction** review.
+Run 12: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 13: This customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 14: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Run 15: The customer message can be classified as a **Neutral** or **Satisfactory** review.
+Consistency: 53.33%
+============================================================

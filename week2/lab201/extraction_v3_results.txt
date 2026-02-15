@@ -1,0 +1,378 @@
+
+--- Extraction v3 – CoT + JSON (15 runs) ---
+
+Run 1:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 2:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 3:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 4:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 5:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 6:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 7:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 8:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 9:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 10:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 11:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 12:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 13:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 14:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Run 15:
+{
+  "order_id": "12345",
+  "order_date": "March 15th",
+  "delivery_speed": "fast",
+  "packaging_condition": "damaged"
+}
+
+Exact-Match Consistency: 100.00%
+Structural Consistency: 100.00%
+============================================================
+
+--- Extraction v3 – Robustness (Complex Input) (15 runs) ---
+
+Run 1:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 2:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 3:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 4:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 5:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 6:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 7:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 8:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 9:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 10:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 11:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 12:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 13:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 14:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 15:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Exact-Match Consistency: 100.00%
+Structural Consistency: 100.00%
+============================================================
+
+--- Extraction v3 – FINAL (Complex Input) (15 runs) ---
+
+Run 1:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 2:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 3:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 4:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 5:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 6:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 7:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 8:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 9:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 10:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 11:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 12:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 13:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 14:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Run 15:
+{
+  "order_id": "78910",
+  "order_date": "April 2nd",
+  "delivery_speed": "faster than expected",
+  "packaging_condition": "outer box torn, one corner of product packaging slightly crushed"
+}
+
+Exact-Match Consistency: 100.00%
+Structural Consistency: 100.00%
+============================================================

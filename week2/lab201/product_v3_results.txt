@@ -1,0 +1,372 @@
+
+--- Product v3 – Few-Shot + Structured (15 runs) ---
+
+Run 1:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical tracking for accurate movement
+
+Run 2:
+Headline:
+Smooth and Precise Navigation
+
+Description:
+Enhance your productivity with this wireless mouse, designed for comfort and accuracy. Its sleek, ergonomic design ensures effortless use during long work sessions, while advanced tracking technology provides precise cursor control on various surfaces. Perfect for both professional and casual use, this mouse offers reliable wireless connectivity and a clutter-free workspace.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless operation
+- Ergonomic design for all-day comfort
+- High-precision optical sensor for accurate tracking
+
+Run 3:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical tracking for accurate movement
+
+Run 4:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and long-lasting performance.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Up to 12 months of battery life
+
+Run 5:
+Headline:
+Precision and Comfort in a Wireless Design
+
+Description:
+Enhance your productivity with this sleek wireless mouse, crafted for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- High-precision optical sensor for accurate tracking
+- Ergonomic design for comfortable extended use
+- Reliable wireless connection with up to 10 meters range
+
+Run 6:
+Headline:
+Smooth Navigation at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for comfort and precision. Perfect for work or leisure, it offers seamless connectivity and reliable performance on any surface, making your daily tasks effortless.
+
+Key Features:
+- Ergonomic design for all-day comfort
+- Wireless connectivity with up to 10 meters range
+- Responsive optical sensor for accurate tracking
+
+Run 7:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- High-precision optical sensor for accurate tracking
+- Wireless connection with a 30-foot range
+- Ergonomic design for comfortable use over extended periods
+
+Run 8:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 9:
+Headline:
+Smooth and Precise Navigation
+
+Description:
+Enhance your productivity with this wireless mouse, designed for comfort and accuracy. Its sleek, ergonomic design ensures comfortable use during long work sessions, while advanced tracking technology provides precise cursor control on various surfaces. Perfect for both professional and casual use, this mouse offers a seamless wireless experience without the clutter of cords.
+
+Key Features:
+- Ergonomic design for all-day comfort
+- High-precision optical tracking
+- Reliable wireless connection with up to 12 months of battery life
+
+Run 10:
+Headline:
+Smooth and Precise Navigation
+
+Description:
+Enhance your productivity with this wireless mouse, designed for comfort and accuracy. Its sleek, ergonomic design ensures effortless use during long work sessions, while advanced technology provides seamless connectivity and precise tracking on various surfaces.
+
+Key Features:
+- Wireless connectivity with up to 33ft range
+- Adjustable DPI for customized sensitivity
+- Ergonomic shape for comfortable use over extended periods
+
+Run 11:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical tracking for accurate movement
+
+Run 12:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing, providing reliable performance without the clutter of cords.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for extended use
+- Precise optical sensor for accurate tracking
+
+Run 13:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical tracking for accurate movement
+
+Run 14:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 15:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- High-precision optical sensor for accurate tracking
+- Wireless connection with a 30-foot range
+- Ergonomic design for comfortable use over extended periods
+
+Exact-Match Consistency: 26.67%
+Structural Consistency: 100.00%
+============================================================
+
+--- Product v3 – FINAL (15 runs) ---
+
+Run 1:
+Headline:
+Smooth and Precise Navigation
+
+Description:
+Enhance your productivity with this wireless mouse, designed for comfort and accuracy. Its sleek, ergonomic design ensures effortless control whether at work or home, while the wireless connectivity provides freedom of movement and clutter-free use.
+
+Key Features:
+- Responsive optical sensor for precise tracking
+- Wireless connection with up to 30 feet range
+- Comfortable ergonomic design for extended use
+
+Run 2:
+Headline:
+Smooth and Precise Navigation
+
+Description:
+Enhance your productivity with this wireless mouse, designed for comfort and accuracy. Its sleek, ergonomic design ensures comfortable use during long work sessions, while advanced tracking technology provides precise cursor control on various surfaces. Perfect for both professional and casual use, this mouse offers reliable wireless connectivity and a clutter-free workspace.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless operation
+- Ergonomic design for all-day comfort
+- High-precision optical sensor for accurate tracking
+
+Run 3:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical sensor for accurate tracking
+
+Run 4:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for comfortable use
+- Precise optical tracking for accurate movement
+
+Run 5:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 6:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 7:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Advanced optical sensor for precise tracking
+- Wireless connection with up to 30 feet range
+- Ergonomic design for comfortable use over extended periods
+
+Run 8:
+Headline:
+Smooth Navigation at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for comfort and precision. Perfect for work or leisure, it offers seamless connectivity and reliable performance on any surface, making your daily tasks effortless.
+
+Key Features:
+- Ergonomic design for all-day comfort
+- Wireless 2.4GHz connection with up to 10 meters range
+- Responsive optical sensor for accurate tracking
+
+Run 9:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless movement
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 10:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- High-precision optical sensor for accurate tracking
+- Wireless connection with a 30-foot range
+- Ergonomic design for comfortable extended use
+
+Run 11:
+Headline:
+Smooth Navigation at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for comfort and precision. Perfect for work or leisure, it offers seamless connectivity and reliable performance on any surface, making your daily tasks effortless.
+
+Key Features:
+- Ergonomic design for all-day comfort
+- Wireless 2.4GHz connection with up to 10 meters range
+- Responsive optical sensor for accurate tracking
+
+Run 12:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Wireless 2.4GHz connection for seamless use
+- Ergonomic design reduces hand fatigue
+- Long-lasting battery life for extended use
+
+Run 13:
+Headline:
+Precision and Comfort in Your Hand
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing, providing reliable performance without the clutter of cords.
+
+Key Features:
+- Wireless connectivity with up to 10 meters range
+- Ergonomic design for extended use
+- Precise optical sensor for accurate tracking
+
+Run 14:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing. Enjoy a clutter-free workspace with reliable wireless connectivity and effortless control.
+
+Key Features:
+- Advanced optical sensor for precise tracking
+- Wireless connection with up to 30 feet range
+- Ergonomic design for comfortable use over extended periods
+
+Run 15:
+Headline:
+Precision and Comfort at Your Fingertips
+
+Description:
+Enhance your productivity with this sleek wireless mouse, designed for smooth navigation and all-day comfort. Its responsive tracking and ergonomic shape make it ideal for work, gaming, or browsing, providing reliable performance without the clutter of cords.
+
+Key Features:
+- Wireless connectivity with a 10-meter range
+- Ergonomic design for extended use
+- Precise optical sensor for accurate tracking
+
+Exact-Match Consistency: 6.67%
+Structural Consistency: 100.00%
+============================================================

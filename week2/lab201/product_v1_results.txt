@@ -1,0 +1,117 @@
+
+--- Product v1 – Zero-Shot Baseline (1 runs) ---
+
+Run 1:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Exact-Match Consistency: 100.00%
+Structural Consistency: 0.00%
+============================================================
+
+--- Product v1 – Zero-Shot Baseline (5 runs) ---
+
+Run 1:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 2:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 3:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 4:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 5:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Exact-Match Consistency: 40.00%
+Structural Consistency: 0.00%
+============================================================
+
+--- Product v1 – Zero-Shot Baseline (10 runs) ---
+
+Run 1:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines functionality with affordability—upgrade your setup today!
+
+Run 2:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 3:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines functionality with affordability. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 4:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 5:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 6:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 7:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 8:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 9:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 10:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Exact-Match Consistency: 10.00%
+Structural Consistency: 0.00%
+============================================================
+
+--- Product v1 – Zero-Shot Baseline (15 runs) ---
+
+Run 1:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 2:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 3:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 4:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 5:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 6:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 7:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines functionality with affordability—upgrade your setup today!
+
+Run 8:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 9:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines functionality with affordability—upgrade your setup today!
+
+Run 10:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 11:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free workspace, while the long-lasting battery provides hours of uninterrupted use. Perfect for work, study, or entertainment, this stylish mouse combines affordability with performance—upgrade your setup today!
+
+Run 12:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines functionality with affordability—upgrade your setup today!
+
+Run 13:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with functionality—upgrade your setup today!
+
+Run 14:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Run 15:
+Experience seamless navigation with our sleek Wireless Mouse, priced at just $29.99. Designed for comfort and precision, this lightweight mouse features a smooth, responsive scroll wheel and adjustable DPI settings to suit your browsing and gaming needs. Its reliable wireless connection ensures clutter-free use, while the long-lasting battery provides hours of uninterrupted performance. Perfect for work, study, or entertainment, this stylish mouse combines affordability with high-quality functionality. Upgrade your setup today with our versatile Wireless Mouse!
+
+Exact-Match Consistency: 40.00%
+Structural Consistency: 0.00%
+============================================================

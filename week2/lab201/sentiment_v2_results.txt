@@ -1,0 +1,19 @@
+
+--- Sentiment v2 – Structured Constraints (15 runs) ---
+Run 1: Positive
+Run 2: Positive
+Run 3: Positive
+Run 4: Positive
+Run 5: Positive
+Run 6: Positive
+Run 7: Positive
+Run 8: Positive
+Run 9: Positive
+Run 10: Positive
+Run 11: Positive
+Run 12: Positive
+Run 13: Positive
+Run 14: Positive
+Run 15: Positive
+Consistency: 100.00%
+============================================================

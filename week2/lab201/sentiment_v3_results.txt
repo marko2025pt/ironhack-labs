@@ -1,0 +1,133 @@
+
+--- Sentiment v3 – Few-Shot Prompting (15 runs) ---
+Run 1: Positive
+Run 2: Positive
+Run 3: Positive
+Run 4: Positive
+Run 5: Positive
+Run 6: Positive
+Run 7: Positive
+Run 8: Positive
+Run 9: Positive
+Run 10: Positive
+Run 11: Positive
+Run 12: Positive
+Run 13: Positive
+Run 14: Positive
+Run 15: Positive
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – Robustness (Positive) (15 runs) ---
+Run 1: Positive
+Run 2: Positive
+Run 3: Positive
+Run 4: Positive
+Run 5: Positive
+Run 6: Positive
+Run 7: Positive
+Run 8: Positive
+Run 9: Positive
+Run 10: Positive
+Run 11: Positive
+Run 12: Positive
+Run 13: Positive
+Run 14: Positive
+Run 15: Positive
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – Robustness (Negative) (15 runs) ---
+Run 1: Negative
+Run 2: Negative
+Run 3: Negative
+Run 4: Negative
+Run 5: Negative
+Run 6: Negative
+Run 7: Negative
+Run 8: Negative
+Run 9: Negative
+Run 10: Negative
+Run 11: Negative
+Run 12: Negative
+Run 13: Negative
+Run 14: Negative
+Run 15: Negative
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – Robustness (Neutral) (15 runs) ---
+Run 1: Neutral
+Run 2: Neutral
+Run 3: Neutral
+Run 4: Neutral
+Run 5: Neutral
+Run 6: Neutral
+Run 7: Neutral
+Run 8: Neutral
+Run 9: Neutral
+Run 10: Neutral
+Run 11: Neutral
+Run 12: Neutral
+Run 13: Neutral
+Run 14: Neutral
+Run 15: Neutral
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – FINAL (Complex Positive) (15 runs) ---
+Run 1: Positive
+Run 2: Positive
+Run 3: Positive
+Run 4: Positive
+Run 5: Positive
+Run 6: Positive
+Run 7: Positive
+Run 8: Positive
+Run 9: Positive
+Run 10: Positive
+Run 11: Positive
+Run 12: Positive
+Run 13: Positive
+Run 14: Positive
+Run 15: Positive
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – FINAL (Complex Negative) (15 runs) ---
+Run 1: Negative
+Run 2: Negative
+Run 3: Negative
+Run 4: Negative
+Run 5: Negative
+Run 6: Negative
+Run 7: Negative
+Run 8: Negative
+Run 9: Negative
+Run 10: Negative
+Run 11: Negative
+Run 12: Negative
+Run 13: Negative
+Run 14: Negative
+Run 15: Negative
+Consistency: 100.00%
+============================================================
+
+--- Sentiment v3 – FINAL (Complex Neutral) (15 runs) ---
+Run 1: Neutral
+Run 2: Neutral
+Run 3: Neutral
+Run 4: Neutral
+Run 5: Neutral
+Run 6: Neutral
+Run 7: Neutral
+Run 8: Neutral
+Run 9: Neutral
+Run 10: Neutral
+Run 11: Neutral
+Run 12: Neutral
+Run 13: Neutral
+Run 14: Neutral
+Run 15: Neutral
+Consistency: 100.00%
+============================================================
