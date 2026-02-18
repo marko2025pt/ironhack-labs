@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab301 - NormalObjects Creative Agent Analysis</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            font-size: 20px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            font-size: 16px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .lab-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .student-name {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        p {
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7f9fb;
+            font-weight: 600;
+        }
+
+        .conclusion {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9fafc;
+            border-left: 4px solid #2c3e50;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                margin: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Creative Agent Analysis</h1>
+    <div class="lab-title">
+        Lab301: NormalObjects - Creative Complaint Handler (LangChain)
+    </div>
+    <div class="student-name">
+        Marco Martins
+    </div>
+</div>
+
+
+<h2>1️⃣ Creative Tool Usage Behavior</h2>
+
+<p>
+The agent demonstrated dynamic and exploratory tool usage by selecting and chaining tools
+based on the context of each complaint. Rather than following a fixed execution path,
+the language model decided which tool to use and when.
+</p>
+
+<p>
+For example, in the psychic visibility complaint, the agent consulted the Demogorgon,
+gathered party insight, checked Hawkins historical records, and ultimately generated
+a creative interdimensional spell. This illustrates layered reasoning:
+</p>
+
+<ul>
+    <li>Information gathering from fictional sources</li>
+    <li>Context comparison and interpretation</li>
+    <li>Creative synthesis through imaginative solutions</li>
+</ul>
+
+<p>
+Tool sequences varied across complaints, confirming non-deterministic behavior.
+This flexibility is characteristic of freeform agent architectures.
+</p>
+
+
+<h2>2️⃣ Comparison with Structured Approaches</h2>
+
+<p>
+This implementation uses a freeform LangChain tool-calling agent.
+The LLM dynamically decides which tool to invoke and in what order,
+resulting in flexible but less predictable reasoning paths.
+</p>
+
+<table>
+    <tr>
+        <th>Freeform Agent (LangChain)</th>
+        <th>Structured Workflow (e.g., LangGraph)</th>
+    </tr>
+    <tr>
+        <td>LLM controls tool flow</td>
+        <td>Developer defines tool flow</td>
+    </tr>
+    <tr>
+        <td>Flexible reasoning path</td>
+        <td>Predefined execution graph</td>
+    </tr>
+    <tr>
+        <td>Emergent behavior</td>
+        <td>Deterministic transitions</td>
+    </tr>
+    <tr>
+        <td>Creative exploration</td>
+        <td>Logic enforcement</td>
+    </tr>
+    <tr>
+        <td>Higher unpredictability</td>
+        <td>Higher reliability</td>
+    </tr>
+</table>
+
+<p>
+While freeform agents enable creative problem-solving and dynamic exploration,
+structured workflows provide stronger guarantees, easier debugging,
+and greater operational reliability.
+</p>
+
+
+<h2>3️⃣ Recommendations for Usage</h2>
+
+<h3>Use Freeform Agents When:</h3>
+<ul>
+    <li>The task is open-ended or creative.</li>
+    <li>Multiple solution paths are acceptable.</li>
+    <li>Exploration is encouraged.</li>
+    <li>Tool order does not need enforcement.</li>
+    <li>Variation in output adds value.</li>
+</ul>
+
+<h3>Use Structured Workflows When:</h3>
+<ul>
+    <li>Order of operations is critical.</li>
+    <li>Business logic must be guaranteed.</li>
+    <li>Regulatory or safety constraints apply.</li>
+    <li>Tool usage must be predictable.</li>
+    <li>Deterministic outcomes are required.</li>
+</ul>
+
+
+<div class="conclusion">
+<strong>Conclusion:</strong><br>
+This lab demonstrates that freeform agents excel in creative and exploratory contexts.
+The agent successfully chained tools dynamically and generated context-sensitive responses.
+However, this flexibility introduces reduced predictability.
+Selecting the appropriate architecture depends on the balance between creativity and control
+required by the problem domain.
+</div>
+
+
+<footer>
+    Lab301 – NormalObjects Creative Complaint Handler (LangChain)
+</footer>
+
+</body>
+</html>
