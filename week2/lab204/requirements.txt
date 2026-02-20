@@ -1,0 +1,30 @@
+# RAG Lab: Chunking Strategies
+# Install with: pip install -r requirements.txt
+
+# Core LangChain
+langchain
+langchain-community
+
+# PDF loading
+pypdf
+
+# OpenAI (Whisper transcription + embeddings)
+openai
+
+# Tokenization (GPT-4 / Claude compatible)
+tiktoken
+
+# Audio processing (podcast splitting)
+pydub
+
+# Semantic chunking embeddings
+sentence-transformers
+
+# Numerical computing
+numpy
+
+# Visualization
+matplotlib
+
+# Environment variables
+python-dotenv
