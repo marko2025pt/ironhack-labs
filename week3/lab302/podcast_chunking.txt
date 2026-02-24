@@ -1,0 +1,1580 @@
+
+======================================================================
+PODCAST CHUNK 1
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:00:00
+end_time: 00:00:12
+
+PAGE CONTENT
+--------------------
+[00:00:00] So imagine for a second you're driving across, I don't know, a massive suspension bridge.
+[00:00:06] Okay.
+[00:00:07] You don't pull over halfway across, get out and demand to see the blueprints, right?
+[00:00:10] You don't interview the welding crew.
+[00:00:12] No.
+
+
+======================================================================
+PODCAST CHUNK 2
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:00:13
+end_time: 00:00:20
+
+PAGE CONTENT
+--------------------
+[00:00:13] You just, you trust it.
+[00:00:14] You just drive.
+[00:00:15] You trust the bridge.
+[00:00:16] You trust the engineering standards, the inspections, the laws that say this thing won't fail.
+[00:00:20] Right.
+
+
+======================================================================
+PODCAST CHUNK 3
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:00:21
+end_time: 00:00:25
+
+PAGE CONTENT
+--------------------
+[00:00:21] It's trust in the infrastructure.
+[00:00:22] It's invisible, but it's there.
+[00:00:23] Exactly.
+[00:00:24] But now let's switch gears.
+[00:00:25] Think about the algorithm that just denied your mortgage application or the AI system
+
+
+======================================================================
+PODCAST CHUNK 4
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:00:32
+end_time: 00:00:41
+
+PAGE CONTENT
+--------------------
+[00:00:32] scanning your face at the airport.
+[00:00:34] Do you have that same trust?
+[00:00:35] And I mean, honestly, should you?
+[00:00:38] That is the defining question of our decade, I think.
+[00:00:41] We've moved past the wow phase of AI and straight into the wait a minute phase.
+
+
+======================================================================
+PODCAST CHUNK 5
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:00:45
+end_time: 00:00:57
+
+PAGE CONTENT
+--------------------
+[00:00:45] Today we are digging into the blueprint for that trust.
+[00:00:48] We're unpacking a document that is arguably the Magna Carta for ethical computing, the
+[00:00:53] ethics guidelines for trustworthy AI.
+[00:00:56] This is a heavy hitter.
+[00:00:57] It was produced by the high level expert group on AI or the AI HLA.
+
+
+======================================================================
+PODCAST CHUNK 6
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:01:02
+end_time: 00:01:17
+
+PAGE CONTENT
+--------------------
+[00:01:02] This is an independent group set up by the European Commission.
+[00:01:05] A mix of academics, industry leaders.
+[00:01:08] And civil society, a really broad group.
+[00:01:11] And just to frame this for everyone listening, this document, it went public in April 2019.
+[00:01:17] In tech years, that's practically the Stone Age.
+
+
+======================================================================
+PODCAST CHUNK 7
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:01:19
+end_time: 00:01:28
+
+PAGE CONTENT
+--------------------
+[00:01:19] We didn't have the generative AI explosion we have today.
+[00:01:22] So why are we blowing the dust off this specific report?
+[00:01:25] Because it's not dusty.
+[00:01:27] It's the foundation.
+[00:01:28] Everything we see now, like the EU AI Act, it all stands on the shoulders of this framework.
+
+
+======================================================================
+PODCAST CHUNK 8
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:01:33
+end_time: 00:01:46
+
+PAGE CONTENT
+--------------------
+[00:01:33] It was the moment the conversation shifted from, you know, how do we make AI powerful
+[00:01:38] to how do we make AI worthy of trust?
+[00:01:40] And our mission for this deep dive is to figure out how to operationalize that.
+[00:01:44] We aren't just talking philosophy here.
+[00:01:46] We're looking at how you take an abstract concept like fairness and turn it into, I
+
+
+======================================================================
+PODCAST CHUNK 9
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:01:51
+end_time: 00:02:03
+
+PAGE CONTENT
+--------------------
+[00:01:51] don't know, Python code.
+[00:01:52] We've got three pillars, four principles, and seven concrete requirements to get through.
+[00:01:57] And a checklist that every developer should probably have tattooed on their arm.
+[00:02:01] Okay, let's start with the big picture.
+[00:02:03] The source material defines trustworthy AI as having three components.
+
+
+======================================================================
+PODCAST CHUNK 10
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:02:08
+end_time: 00:02:14
+
+PAGE CONTENT
+--------------------
+[00:02:08] Right.
+[00:02:09] And they have to exist through the entire lifecycle of the system.
+[00:02:12] Not just at launch.
+[00:02:13] Not just at launch.
+[00:02:14] From design to retirement.
+
+
+======================================================================
+PODCAST CHUNK 11
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:02:16
+end_time: 00:02:26
+
+PAGE CONTENT
+--------------------
+[00:02:16] Think of it like a three-legged stool.
+[00:02:19] The first leg is lawful.
+[00:02:21] The AI has to comply with all the regulations.
+[00:02:24] Which feels like a pretty low bar.
+[00:02:26] Don't break the law.
+
+
+======================================================================
+PODCAST CHUNK 12
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:02:27
+end_time: 00:02:36
+
+PAGE CONTENT
+--------------------
+[00:02:27] I mean, that should be step one for anything, right?
+[00:02:29] You'd think so.
+[00:02:31] But in the tech world, move fast and break things has been the mantra for a long, long
+[00:02:35] time.
+[00:02:36] This is, no, you have to follow the rules.
+
+
+======================================================================
+PODCAST CHUNK 13
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:02:38
+end_time: 00:02:44
+
+PAGE CONTENT
+--------------------
+[00:02:38] But laws are slow.
+[00:02:40] Terribly slow.
+[00:02:41] Moore's law moves a lot faster than Parliament or Congress.
+[00:02:43] Right.
+[00:02:44] By the time a law is passed to regulate a specific algorithm, that algorithm is what?
+
+
+======================================================================
+PODCAST CHUNK 14
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:02:48
+end_time: 00:02:55
+
+PAGE CONTENT
+--------------------
+[00:02:48] Three versions obsolete?
+[00:02:50] Precisely.
+[00:02:51] That's why the second leg of the stool is ethical.
+[00:02:53] This component fills the gap.
+[00:02:55] It ensures you adhere to ethical principles, even when the law hasn't caught up.
+
+
+======================================================================
+PODCAST CHUNK 15
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:00
+end_time: 00:03:08
+
+PAGE CONTENT
+--------------------
+[00:03:00] It's the difference between technically legal and actually right.
+[00:03:04] And the third leg?
+[00:03:05] Robust.
+[00:03:06] Both technically and socially.
+[00:03:08] Because you can have the most lawful, well-intentioned AI, but if it crashes every time it sees a
+
+
+======================================================================
+PODCAST CHUNK 16
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:12
+end_time: 00:03:18
+
+PAGE CONTENT
+--------------------
+[00:03:12] pixel it doesn't recognize.
+[00:03:14] Or it can be easily hacked.
+[00:03:15] Then it causes harm.
+[00:03:16] Unintentional harm is still harm.
+[00:03:18] So lawful, ethical, and robust.
+
+
+======================================================================
+PODCAST CHUNK 17
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:21
+end_time: 00:03:30
+
+PAGE CONTENT
+--------------------
+[00:03:21] The document then roots this whole ethical approach in something very specific.
+[00:03:27] Fundamental rights.
+[00:03:28] Yes.
+[00:03:29] The EU Charter, specifically.
+[00:03:30] This is so crucial because it changes the framing.
+
+
+======================================================================
+PODCAST CHUNK 18
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:33
+end_time: 00:03:41
+
+PAGE CONTENT
+--------------------
+[00:03:33] AI isn't an end in itself.
+[00:03:35] It's a tool for human flourishing.
+[00:03:38] I highlighted that phrase in my notes.
+[00:03:40] Human flourishing.
+[00:03:41] It's such a distinct shift from, you know, optimizing efficiency or maximizing engagement.
+
+
+======================================================================
+PODCAST CHUNK 19
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:46
+end_time: 00:03:56
+
+PAGE CONTENT
+--------------------
+[00:03:46] It is.
+[00:03:47] It's nice, but it feels hard to measure.
+[00:03:49] It is hard to measure.
+[00:03:51] But to make it concrete, the experts derive four ethical principles from those rights.
+[00:03:56] These are the non-negotiables.
+
+
+======================================================================
+PODCAST CHUNK 20
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:03:57
+end_time: 00:04:03
+
+PAGE CONTENT
+--------------------
+[00:03:57] Okay, let's run through them.
+[00:03:58] Principle one.
+[00:03:59] Respect for human autonomy.
+[00:04:00] This means humans stay in the driver's seat.
+[00:04:03] AI shouldn't hurt us or condition us or manipulate us.
+
+
+======================================================================
+PODCAST CHUNK 21
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:04:07
+end_time: 00:04:18
+
+PAGE CONTENT
+--------------------
+[00:04:07] It shouldn't deceive you into clicking something you wouldn't otherwise choose.
+[00:04:11] It's about preserving our self-determination.
+[00:04:13] Principle two is prevention of harm.
+[00:04:16] Safety first.
+[00:04:18] This covers physical integrity, like a robotic arm not swinging into a worker.
+
+
+======================================================================
+PODCAST CHUNK 22
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:04:23
+end_time: 00:04:31
+
+PAGE CONTENT
+--------------------
+[00:04:23] But also mental integrity.
+[00:04:25] And of course, protection from malicious use.
+[00:04:28] Principle three is the big one we hear about constantly.
+[00:04:30] Fairness.
+[00:04:31] Right.
+
+
+======================================================================
+PODCAST CHUNK 23
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:04:32
+end_time: 00:04:43
+
+PAGE CONTENT
+--------------------
+[00:04:32] This is about the equal distribution of benefits and costs.
+[00:04:35] It means avoiding unfair bias and discrimination.
+[00:04:38] Basically, ensuring the AI doesn't work perfectly for one group of people while ruining the
+[00:04:42] lives of another.
+[00:04:43] And finally, principle four, explicability.
+
+
+======================================================================
+PODCAST CHUNK 24
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:04:47
+end_time: 00:04:57
+
+PAGE CONTENT
+--------------------
+[00:04:47] The black box problem.
+[00:04:48] If an algorithm affects your life, decides your credit, your job, whatever, you have
+[00:04:53] the right to know how it made that decision.
+[00:04:54] You can't contest a decision you can't understand.
+[00:04:57] Now reading through these, they all sound noble, but my first thought was, these have
+
+
+======================================================================
+PODCAST CHUNK 25
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:05:00
+end_time: 00:05:07
+
+PAGE CONTENT
+--------------------
+[00:05:00] to conflict, don't they?
+[00:05:02] Absolutely.
+[00:05:03] You can't always have perfect fairness and perfect privacy and perfect safety all at
+[00:05:06] once.
+[00:05:07] And that is the sharpest observation you can make here.
+
+
+======================================================================
+PODCAST CHUNK 26
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:05:11
+end_time: 00:05:21
+
+PAGE CONTENT
+--------------------
+[00:05:11] The document is surprisingly honest about these tensions.
+[00:05:14] It says there's no magic formula.
+[00:05:17] There are only trade-offs.
+[00:05:18] The example that stood out to me was predictive policing.
+[00:05:21] It's the classic dilemma.
+
+
+======================================================================
+PODCAST CHUNK 27
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:05:23
+end_time: 00:05:38
+
+PAGE CONTENT
+--------------------
+[00:05:23] On one hand, you could argue it serves the prevention of harm principle.
+[00:05:27] If the data helps police stop a crime before it happens, aren't we making society safer?
+[00:05:32] But on the other hand, you're using surveillance that just smashes into respect for human autonomy.
+[00:05:37] Right.
+[00:05:38] On the other hand, the historical crime data is biased, which it almost always is.
+
+
+======================================================================
+PODCAST CHUNK 28
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:05:43
+end_time: 00:05:53
+
+PAGE CONTENT
+--------------------
+[00:05:43] You're violating fairness by targeting specific neighborhoods over and over.
+[00:05:47] So it's a direct clash.
+[00:05:48] Exactly.
+[00:05:49] Does the potential for safety outweigh the certainty of surveillance and bias?
+[00:05:53] The guidelines don't give a yes or no.
+
+
+======================================================================
+PODCAST CHUNK 29
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:05:55
+end_time: 00:06:05
+
+PAGE CONTENT
+--------------------
+[00:05:55] They say this tension must be acknowledged, debated, and reasoned out.
+[00:05:58] You can't just pretend the trade-off doesn't exist.
+[00:06:01] That moves us perfectly into the how.
+[00:06:02] Theory is great, but engineers need requirements.
+[00:06:05] They need specs.
+
+
+======================================================================
+PODCAST CHUNK 30
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:06:06
+end_time: 00:06:15
+
+PAGE CONTENT
+--------------------
+[00:06:06] And chapter two of the source lists seven of them.
+[00:06:08] This is really the meat of the document.
+[00:06:10] This is the bridge between be ethical and write code.
+[00:06:14] Okay.
+[00:06:15] Requirement one is human agency and oversight.
+
+
+======================================================================
+PODCAST CHUNK 31
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:06:18
+end_time: 00:06:31
+
+PAGE CONTENT
+--------------------
+[00:06:18] This goes back to autonomy.
+[00:06:19] The document lists three different governance mechanisms, HITL, HOTL, and HIC.
+[00:06:26] Human in the loop, human on the loop, and human in command.
+[00:06:29] It's a gradient of control.
+[00:06:31] Let's break that down.
+
+
+======================================================================
+PODCAST CHUNK 32
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:06:32
+end_time: 00:06:42
+
+PAGE CONTENT
+--------------------
+[00:06:32] Human in the loop.
+[00:06:33] That's the tightest control.
+[00:06:35] The AI makes a suggestion, but a human has to click approve for every single action.
+[00:06:41] But let me play devil's advocate here.
+[00:06:42] If you have an AI processing 10,000 loan applications an hour, is human in the loop even real?
+
+
+======================================================================
+PODCAST CHUNK 33
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:06:48
+end_time: 00:06:58
+
+PAGE CONTENT
+--------------------
+[00:06:48] That's a huge risk.
+[00:06:49] Or is the human just a rubber stamp because they can't possibly review that fast?
+[00:06:53] It's called automation bias.
+[00:06:54] The human just trusts the machine too much or gets fatigued and just clicks yes, yes,
+[00:06:58] yes.
+
+
+======================================================================
+PODCAST CHUNK 34
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:06:59
+end_time: 00:07:06
+
+PAGE CONTENT
+--------------------
+[00:06:59] The guidelines warn about this.
+[00:07:01] Just having a human sitting there isn't enough.
+[00:07:03] They need to have the actual capacity to override the system.
+[00:07:05] Okay.
+[00:07:06] So then you have human on the loop.
+
+
+======================================================================
+PODCAST CHUNK 35
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:07:07
+end_time: 00:07:17
+
+PAGE CONTENT
+--------------------
+[00:07:07] Where the human monitors and just steps in if things look weird.
+[00:07:10] And human in command.
+[00:07:11] Where the human decides when the system runs and when it dies, which brings up the stop
+[00:07:16] button.
+[00:07:17] Ah, yes.
+
+
+======================================================================
+PODCAST CHUNK 36
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:07:18
+end_time: 00:07:33
+
+PAGE CONTENT
+--------------------
+[00:07:18] The big red button.
+[00:07:19] The requirement explicitly mentions the capability to safely abort an operation.
+[00:07:23] It sounds obvious, but a kill switch that actually works and doesn't cause a catastrophe
+[00:07:29] when you hit it is a very complex engineering challenge.
+[00:07:33] Let's look at requirement two, technical robustness and safety.
+
+
+======================================================================
+PODCAST CHUNK 37
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:07:37
+end_time: 00:07:47
+
+PAGE CONTENT
+--------------------
+[00:07:37] We touched on this, but I want to zoom in on resilience to attack.
+[00:07:41] The source talks about data poisoning.
+[00:07:43] This isn't just someone guessing your password, is it?
+[00:07:46] No, no.
+[00:07:47] This is much more insidious.
+
+
+======================================================================
+PODCAST CHUNK 38
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:07:48
+end_time: 00:07:59
+
+PAGE CONTENT
+--------------------
+[00:07:48] In traditional cybersecurity, hackers try to break the wall to steal data.
+[00:07:51] With data poisoning, the attacker feeds bad examples to the AI during training.
+[00:07:56] They don't break the system.
+[00:07:57] They change the system's mind.
+[00:07:59] So they teach it to be wrong.
+
+
+======================================================================
+PODCAST CHUNK 39
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:08:00
+end_time: 00:08:12
+
+PAGE CONTENT
+--------------------
+[00:08:00] Exactly.
+[00:08:01] Imagine teaching a self-driving car that a stop sign is actually a speed limit 45 sign
+[00:08:06] by feeding it thousands of corrupted images.
+[00:08:09] The software works perfectly, but its logic is deadly.
+[00:08:12] That's terrifying.
+
+
+======================================================================
+PODCAST CHUNK 40
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:08:13
+end_time: 00:08:26
+
+PAGE CONTENT
+--------------------
+[00:08:13] It's why robustness is a totally different beast in AI.
+[00:08:16] Requirement three is privacy and data governance.
+[00:08:20] Now we all know about things like GDPR, but the source focuses on something called inference
+[00:08:25] risks.
+[00:08:26] This part actually unsettled me.
+
+
+======================================================================
+PODCAST CHUNK 41
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:08:29
+end_time: 00:08:39
+
+PAGE CONTENT
+--------------------
+[00:08:29] It should.
+[00:08:30] We tend to think privacy means, okay, I won't tell the app my medical history, but AI is
+[00:08:36] an inference machine.
+[00:08:38] It's the digital shadow concept.
+[00:08:39] That's it.
+
+
+======================================================================
+PODCAST CHUNK 42
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:08:40
+end_time: 00:08:48
+
+PAGE CONTENT
+--------------------
+[00:08:40] Exactly.
+[00:08:41] Yeah.
+[00:08:42] You might not tell an algorithm your political views or your sexual orientation, but based
+[00:08:44] on your location data, your typing speed, the time of day you browse.
+[00:08:48] Your grocery list.
+
+
+======================================================================
+PODCAST CHUNK 43
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:08:49
+end_time: 00:09:01
+
+PAGE CONTENT
+--------------------
+[00:08:49] Your grocery list.
+[00:08:50] The AI can infer those details with a frighteningly high accuracy.
+[00:08:54] So even if I keep my data private, the AI just guesses it anyway.
+[00:08:57] And once it guesses, it treats that inference as a fact.
+[00:09:01] The guidelines are clear that this inferred data needs to be treated as sensitive, even
+
+
+======================================================================
+PODCAST CHUNK 44
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:09:05
+end_time: 00:09:14
+
+PAGE CONTENT
+--------------------
+[00:09:05] if you never disclosed it.
+[00:09:07] Moving to requirement four, transparency.
+[00:09:09] There's a specific rule here that I think everyone listening will appreciate, identification.
+[00:09:13] It's simple.
+[00:09:14] AI systems must not represent themselves as humans.
+
+
+======================================================================
+PODCAST CHUNK 45
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:09:16
+end_time: 00:09:25
+
+PAGE CONTENT
+--------------------
+[00:09:16] No more.
+[00:09:17] Hi, I'm Sarah from the electric company when it's clearly a bot.
+[00:09:20] It's deceptive.
+[00:09:22] You have a right to know if you are interacting with a machine.
+[00:09:25] If a chatbot mimics human emotion or, you know, it pauses to type just to trick you.
+
+
+======================================================================
+PODCAST CHUNK 46
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:09:30
+end_time: 00:09:42
+
+PAGE CONTENT
+--------------------
+[00:09:30] That fails the transparency test.
+[00:09:32] Completely.
+[00:09:33] Requirement five, diversity, non-discrimination, and fairness.
+[00:09:38] We know about bias in data, but the document suggests a solution that isn't about code
+[00:09:42] at all.
+
+
+======================================================================
+PODCAST CHUNK 47
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:09:43
+end_time: 00:09:55
+
+PAGE CONTENT
+--------------------
+[00:09:43] It's about team composition.
+[00:09:45] This is so critical.
+[00:09:47] If your development team is five guys from the same university who all grew up in the
+[00:09:51] same demographic, they are going to have the same blind spots.
+[00:09:55] They're not trying to be biased.
+
+
+======================================================================
+PODCAST CHUNK 48
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:09:56
+end_time: 00:10:04
+
+PAGE CONTENT
+--------------------
+[00:09:56] No.
+[00:09:57] They just literally cannot see the problems that someone from a different background has.
+[00:10:00] background would spot in five seconds.
+[00:10:01] So diversity isn't just an HR box to tick,
+[00:10:04] it's a quality control mechanism.
+
+
+======================================================================
+PODCAST CHUNK 49
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:10:06
+end_time: 00:10:15
+
+PAGE CONTENT
+--------------------
+[00:10:06] It's a robustness mechanism.
+[00:10:08] Diverse teams build code that breaks less often
+[00:10:11] than the real world.
+[00:10:12] Requirement six, societal and environmental well-being.
+[00:10:15] This is the first time I've really seen green AI
+
+
+======================================================================
+PODCAST CHUNK 50
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:10:18
+end_time: 00:10:28
+
+PAGE CONTENT
+--------------------
+[00:10:18] emphasized in a foundational document like this.
+[00:10:20] It's a huge issue.
+[00:10:22] Training a large language model consumes a staggering
+[00:10:25] amount of electricity and water for cooling.
+[00:10:28] The guidelines ask developers to assess that cost.
+
+
+======================================================================
+PODCAST CHUNK 51
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:10:31
+end_time: 00:10:46
+
+PAGE CONTENT
+--------------------
+[00:10:31] Is the smartness of this model worth the carbon footprint?
+[00:10:35] And it also asks about the impact on democracy.
+[00:10:38] Which is so prescient, given this was written in 2019.
+[00:10:41] It asks, does this system undermine democratic processes?
+[00:10:46] Does it create echo chambers?
+
+
+======================================================================
+PODCAST CHUNK 52
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:10:48
+end_time: 00:10:54
+
+PAGE CONTENT
+--------------------
+[00:10:48] Does it polarize discourse?
+[00:10:49] Right.
+[00:10:50] If your algorithm maximizes engagement
+[00:10:52] by making people angry, it is not trustworthy.
+[00:10:54] Finally, requirement seven, accountability.
+
+
+======================================================================
+PODCAST CHUNK 53
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:10:58
+end_time: 00:11:04
+
+PAGE CONTENT
+--------------------
+[00:10:58] This brings us to audits.
+[00:10:59] If an algorithm affects fundamental rights,
+[00:11:01] it needs to be auditable.
+[00:11:03] And critically, the source calls for
+[00:11:04] whistleblower protection.
+
+
+======================================================================
+PODCAST CHUNK 54
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:06
+end_time: 00:11:13
+
+PAGE CONTENT
+--------------------
+[00:11:06] Which implies that the people building these things
+[00:11:08] are the first line of defense.
+[00:11:09] They have to be.
+[00:11:10] If an engineer sees that a system is behaving unethically,
+[00:11:13] they need a safe channel to report it
+
+
+======================================================================
+PODCAST CHUNK 55
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:15
+end_time: 00:11:22
+
+PAGE CONTENT
+--------------------
+[00:11:15] without getting fired.
+[00:11:16] NGOs and trade unions also need a way to flag issues.
+[00:11:19] So we have the seven requirements,
+[00:11:21] but how do you actually check them?
+[00:11:22] The document offers a toolkit.
+
+
+======================================================================
+PODCAST CHUNK 56
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:24
+end_time: 00:11:33
+
+PAGE CONTENT
+--------------------
+[00:11:24] Yeah, it splits this into technical
+[00:11:26] and non-technical methods.
+[00:11:28] Technical methods include architectures for trustworthy AI,
+[00:11:31] which is like building limits into the code.
+[00:11:33] But I want to talk about red teaming.
+
+
+======================================================================
+PODCAST CHUNK 57
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:35
+end_time: 00:11:41
+
+PAGE CONTENT
+--------------------
+[00:11:35] Ah, this is a favorite of mine.
+[00:11:37] It just flips the script.
+[00:11:38] Usually you pay people to build stuff.
+[00:11:40] Here you pay them to break it.
+[00:11:41] Exactly.
+
+
+======================================================================
+PODCAST CHUNK 58
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:42
+end_time: 00:11:51
+
+PAGE CONTENT
+--------------------
+[00:11:42] You hire a red team of ethical hackers
+[00:11:45] and social scientists to attack your AI.
+[00:11:48] Try to poison the data.
+[00:11:49] Try to make it spout hate speech.
+[00:11:51] You need to find the cracks before the bad guys do.
+
+
+======================================================================
+PODCAST CHUNK 59
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:11:54
+end_time: 00:12:05
+
+PAGE CONTENT
+--------------------
+[00:11:54] That feels like a massive cultural shift
+[00:11:56] for engineering teams.
+[00:11:57] You have to be willing to let someone tear your baby apart.
+[00:12:00] It requires a lot of humility, but it's necessary.
+[00:12:05] The document also provides an assessment list.
+
+
+======================================================================
+PODCAST CHUNK 60
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:08
+end_time: 00:12:15
+
+PAGE CONTENT
+--------------------
+[00:12:08] It looks like a checklist,
+[00:12:09] but the experts are very careful to say,
+[00:12:11] do not just tick these boxes.
+[00:12:13] Right, it's not a tax return where you file it
+[00:12:15] and forget it.
+
+
+======================================================================
+PODCAST CHUNK 61
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:16
+end_time: 00:12:23
+
+PAGE CONTENT
+--------------------
+[00:12:16] It's a continuous cycle, development, use,
+[00:12:19] analysis, redesign.
+[00:12:21] You have to keep asking questions.
+[00:12:22] Constantly.
+[00:12:23] Did the system behave unexpectedly last week?
+
+
+======================================================================
+PODCAST CHUNK 62
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:26
+end_time: 00:12:34
+
+PAGE CONTENT
+--------------------
+[00:12:26] Has the user demographic changed?
+[00:12:28] If you treat ethics as a one-time compliance task,
+[00:12:31] you've already failed.
+[00:12:32] We've covered the what and the how.
+[00:12:34] Now I want to look at the so what.
+
+
+======================================================================
+PODCAST CHUNK 63
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:37
+end_time: 00:12:44
+
+PAGE CONTENT
+--------------------
+[00:12:37] The document ends with a reality check
+[00:12:39] on opportunities versus risks.
+[00:12:41] Because the upside is huge.
+[00:12:44] Massive.
+[00:12:44] The source highlights healthcare AI detecting cancer
+
+
+======================================================================
+PODCAST CHUNK 64
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:47
+end_time: 00:12:56
+
+PAGE CONTENT
+--------------------
+[00:12:47] earlier than any human doctor could.
+[00:12:49] Or sustainability smart grids balancing energy flow
+[00:12:53] to fight climate change.
+[00:12:53] Or education personalized learning for every child.
+[00:12:56] The potential is incredible.
+
+
+======================================================================
+PODCAST CHUNK 65
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:12:58
+end_time: 00:13:09
+
+PAGE CONTENT
+--------------------
+[00:12:58] But the expert group lists some specific critical concerns.
+[00:13:02] These are the things that keep them up at night.
+[00:13:04] One distinction they make is between
+[00:13:06] identification and tracking.
+[00:13:09] This is vital.
+
+
+======================================================================
+PODCAST CHUNK 66
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:13:10
+end_time: 00:13:19
+
+PAGE CONTENT
+--------------------
+[00:13:10] Identification is verifying you are who you say you are
+[00:13:13] to give you access, like unlocking your phone.
+[00:13:16] Tracking is following where you go,
+[00:13:18] who you meet, what you do.
+[00:13:19] The source warns that we are sliding dangerously close
+
+
+======================================================================
+PODCAST CHUNK 67
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:13:22
+end_time: 00:13:30
+
+PAGE CONTENT
+--------------------
+[00:13:22] to mass surveillance under the guise of security.
+[00:13:25] Then there's citizen scoring.
+[00:13:26] And we need to be clear here, this isn't a credit score.
+[00:13:29] No.
+[00:13:30] A credit score rates your ability to pay back a loan.
+
+
+======================================================================
+PODCAST CHUNK 68
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:13:33
+end_time: 00:13:43
+
+PAGE CONTENT
+--------------------
+[00:13:33] Normative citizen scoring rates your moral personality
+[00:13:36] or your civic value.
+[00:13:38] And the document is incredibly firm on this.
+[00:13:40] It says rating humans on their behavior
+[00:13:43] to deny them services or rights
+
+
+======================================================================
+PODCAST CHUNK 69
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:13:45
+end_time: 00:13:53
+
+PAGE CONTENT
+--------------------
+[00:13:45] endangers human autonomy.
+[00:13:47] It's fundamentally anti-democratic.
+[00:13:49] Another major red flag is law WS
+[00:13:51] legal autonomous weapon systems.
+[00:13:53] Killer robots, effectively.
+
+
+======================================================================
+PODCAST CHUNK 70
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:13:55
+end_time: 00:14:06
+
+PAGE CONTENT
+--------------------
+[00:13:55] The source cites the European Parliament
+[00:13:57] calling for a ban on weapons that select and engage targets
+[00:14:00] without a human saying fire.
+[00:14:02] The risk of an arms race and just the moral hazard
+[00:14:06] of an algorithm deciding who lives and dies,
+
+
+======================================================================
+PODCAST CHUNK 71
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:09
+end_time: 00:14:18
+
+PAGE CONTENT
+--------------------
+[00:14:09] it's just too high.
+[00:14:10] It removes the weight of moral responsibility from warfare.
+[00:14:13] The last risk mentioned is covert AI.
+[00:14:16] This goes back to transparency.
+[00:14:18] If we allow AI to blur the line between human and machine,
+
+
+======================================================================
+PODCAST CHUNK 72
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:21
+end_time: 00:14:29
+
+PAGE CONTENT
+--------------------
+[00:14:21] we risk manipulation.
+[00:14:24] If you think you're confiding in a sympathetic human,
+[00:14:26] but it's actually a bot program to extract data or sell you
+[00:14:29] something.
+[00:14:29] That's a huge violation of trust.
+
+
+======================================================================
+PODCAST CHUNK 73
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:31
+end_time: 00:14:36
+
+PAGE CONTENT
+--------------------
+[00:14:31] It is.
+[00:14:31] We shouldn't be building emotional attachments
+[00:14:33] to software.
+[00:14:34] So bringing this all together, we started with a bridge.
+[00:14:36] We trust the bridge because of physics and laws.
+
+
+======================================================================
+PODCAST CHUNK 74
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:39
+end_time: 00:14:45
+
+PAGE CONTENT
+--------------------
+[00:14:39] Can we ever get there with AI?
+[00:14:40] The source argues that we need to view this
+[00:14:43] as a sociotechnical system.
+[00:14:44] It's not just the code.
+[00:14:45] It's the code plus the humans plus the laws
+
+
+======================================================================
+PODCAST CHUNK 75
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:48
+end_time: 00:14:57
+
+PAGE CONTENT
+--------------------
+[00:14:48] plus the environment.
+[00:14:49] But there's a philosophical nugget
+[00:14:51] at the end of the document that really stuck with me.
+[00:14:54] It says trust is something we give to people.
+[00:14:57] We trust people.
+
+
+======================================================================
+PODCAST CHUNK 76
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:14:57
+end_time: 00:15:05
+
+PAGE CONTENT
+--------------------
+[00:14:57] We rely on machines.
+[00:14:59] That's the crux of it, isn't it?
+[00:15:01] If an AI is a black box that we can't explain,
+[00:15:04] we can't truly trust it.
+[00:15:05] We're just relying on the integrity
+
+
+======================================================================
+PODCAST CHUNK 77
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:15:07
+end_time: 00:15:15
+
+PAGE CONTENT
+--------------------
+[00:15:07] of the people who built it.
+[00:15:09] So trustworthy AI is really about proving
+[00:15:12] that the people behind the curtain
+[00:15:14] have done their homework.
+[00:15:15] That is the takeaway.
+
+
+======================================================================
+PODCAST CHUNK 78
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:15:17
+end_time: 00:15:26
+
+PAGE CONTENT
+--------------------
+[00:15:17] So here's the challenge for you listening.
+[00:15:19] Next time you interact with a system,
+[00:15:21] a loan app, a hiring bot, a smart assistant,
+[00:15:24] ask the hard questions.
+[00:15:26] Is it transparent?
+
+
+======================================================================
+PODCAST CHUNK 79
+======================================================================
+
+METADATA
+--------------------
+doc_type: podcast
+source: The_Blueprint_For_Trustworthy_AI
+start_time: 00:15:27
+end_time: 00:15:34
+
+PAGE CONTENT
+--------------------
+[00:15:27] Is there a human in the loop?
+[00:15:29] Do you know why it made that decision?
+[00:15:30] Don't settle for the computer said so.
+[00:15:32] Demand the blueprints.
+[00:15:34] Until the next deep dive, stay curious.
+

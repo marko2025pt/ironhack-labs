@@ -1,0 +1,35 @@
+# Lab 302: Relevance Scoring and Rerankers
+# Install all dependencies with: pip install -r requirements.txt
+# Uses LangChain 1.0 — no version pins on LangChain packages to stay on latest,
+# matching the course instructor's setup.
+
+# LangChain 1.0 — core framework and integrations
+langchain
+langchain-core
+langchain-openai
+langchain-community
+langchain-text-splitters
+
+# OpenAI — embeddings and LLM
+openai
+
+# PDF loading
+pypdf
+
+# Vector store (local, no API key required)
+chromadb
+
+# Reranker — Cross-Encoder (local, no API key required)
+sentence-transformers
+
+# Tokenization (used internally by LangChain and OpenAI)
+tiktoken
+
+# Environment variables
+python-dotenv
+
+# Data display
+pandas
+
+# (Optional) Cohere reranker — requires COHERE_API_KEY in .env
+cohere

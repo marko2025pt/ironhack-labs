@@ -1,0 +1,478 @@
+================================================================================
+NOTEBOOK RUN LOG
+Notebook : relevance_scoring_rerankersV2_with_logging.ipynb
+Started  : 2026-02-24 14:53:55
+================================================================================
+
+--------------------------------------------------------------------------------
+[14:54:27]  Step 1a — API key loaded
+--------------------------------------------------------------------------------
+  OpenAI key loaded: sk-svcac...
+
+--------------------------------------------------------------------------------
+[14:55:11]  Step 1b — PDF loaded
+--------------------------------------------------------------------------------
+  PDF loaded successfully.
+  Total pages      : 73
+  Total characters : 226,399
+  Total words      : 32,066
+  
+  --- Preview: Page 1 ---
+   
+  1 
+   
+  Living Repository of  
+  AI Literacy Practices – v. 16.04.2025 
+   
+  Living Repository of  
+  AI Literacy Practices  
+  v.16.04.2025 
+   
+   
+  Disclaimer 
+  The following document is a living repository of AI literacy practices  collected via a 
+  survey that was shared, for the time being, only with AI Pact p
+
+--------------------------------------------------------------------------------
+[14:55:35]  Step 1c — PDF cleaned
+--------------------------------------------------------------------------------
+  Pages used       : 69 (skipped first 4 TOC pages)
+  Cleaned length   : 203,571 characters
+  
+  --- First content page after cleaning ---
+   
+  5 
+   
+  Living Repository of  
+  AI Literacy Practices – v. 16.04.2025 
+  I. Fully implemented practices 
+  AI & Partners, B.V.                      
+  On the organisation 
+  Name: AI & Partners, B.V.                      
+  Size: Small (16-49 employees)                
+  Headquarter: The Netherlands 
+  Sector: Technology 
+  The organisation is a: ☐Provider/☒Deployer of AI systems 
+  AI system(s) provided and/or deplo
+
+--------------------------------------------------------------------------------
+[14:55:59]  Step 1d — Company segmentation
+--------------------------------------------------------------------------------
+  FILE CREATED : company_segmentation.txt
+  Total companies detected: 28
+  
+  --- Example metadata ---
+  {'doc_type': 'pdf', 'company_name': 'AI & Partners, B.V.', 'size': 'Small (16-49 employees)', 'headquarter': 'The Netherlands', 'sector': 'Technology', 'status': 'Fully implemented'}
+
+--------------------------------------------------------------------------------
+[14:56:39]  Step 1e — PDF chunked into LangChain Documents
+--------------------------------------------------------------------------------
+  FILE CREATED : company_chunking.txt
+  Total documents created: 56
+  
+  --- Example Document ---
+  Company: AI & Partners, B.V.
+  AI & Partners, B.V.
+  On the organisation
+  Name: AI & Partners, B.V.
+  Size: Small (16-49 employees)
+  Headquarter: The Netherlands
+  Sector: Technology
+  The organisation is a: ☐Provider/☒Deployer of AI systems
+  AI system(s) provided and/or deployed:
+  The Orthrus AI Scanner is a too
+
+--------------------------------------------------------------------------------
+[14:58:35]  Step 1f — Podcast transcribed
+--------------------------------------------------------------------------------
+  FILE CREATED : podcast_transcript.txt
+  Transcription complete. Lines: 395
+
+--------------------------------------------------------------------------------
+[14:59:01]  Step 1g — Podcast chunked into LangChain Documents
+--------------------------------------------------------------------------------
+  FILE CREATED : podcast_transcript.txt
+  FILE CREATED : podcast_chunking.txt
+  Total podcast chunks created: 79
+  
+  --- Preview first chunk ---
+  [00:00:00] So imagine for a second you're driving across, I don't know, a massive suspension bridge.
+  [00:00:06] Okay.
+  [00:00:07] You don't pull over halfway across, get out and demand to see the bluep
+
+--------------------------------------------------------------------------------
+[15:01:41]  Step 2a — All documents combined
+--------------------------------------------------------------------------------
+  Total chunks ready for embedding: 135
+    PDF chunks     : 56
+    Podcast chunks : 79
+  
+  --- Metadata breakdown (doc_type) ---
+    pdf: 56 chunks
+    podcast: 79 chunks
+  
+  --- PDF chunk example ---
+    Company : AI & Partners, B.V.
+    Section : organisation
+    Content : Company: AI & Partners, B.V. AI & Partners, B.V. On the organisation Name: AI & Partners, B.V. Size: Small (16-49 employees) Headquarter: The Netherla
+  
+  --- Podcast chunk example ---
+    Start   : 00:00:00
+    Content : [00:00:00] So imagine for a second you're driving across, I don't know, a massive suspension bridge. [00:00:06] Okay. [00:00:07] You don't pull over h
+
+--------------------------------------------------------------------------------
+[15:02:13]  Step 2b — Embedding model initialized
+--------------------------------------------------------------------------------
+  Embedding model ready: text-embedding-3-small
+
+--------------------------------------------------------------------------------
+[15:02:55]  Step 2c — Vector store built/loaded
+--------------------------------------------------------------------------------
+  Vector store ready. Total vectors: 135
+
+--------------------------------------------------------------------------------
+[15:03:21]  Step 2c — Baseline similarity search test
+--------------------------------------------------------------------------------
+  Score: 0.7598 | podcast | [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is really ab...
+  Score: 0.7758 | podcast | [00:01:51] don't know, Python code. [00:01:52] We've got three pillars, four pri...
+  Score: 0.8459 | podcast | [00:00:45] Today we are digging into the blueprint for that trust. [00:00:48] We...
+  Score: 0.8705 | podcast | [00:14:57] We rely on machines. [00:14:59] That's the crux of it, isn't it? [00:...
+
+--------------------------------------------------------------------------------
+[15:07:12]  Step 3 — llm_relevance_score() defined
+--------------------------------------------------------------------------------
+  llm_relevance_score() defined — ready to use
+
+--------------------------------------------------------------------------------
+[15:10:27]  Step 3 — LLM relevance score (single chunk test)
+--------------------------------------------------------------------------------
+  Chunk  : [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is really about proving [00:15:12] that the people b
+  Sim    : 0.7480
+  LLM    : 5.0
+
+--------------------------------------------------------------------------------
+[15:14:42]  Step 3 — LLM relevance score (single chunk test)
+--------------------------------------------------------------------------------
+  Chunk  : [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is really about proving [00:15:12] that the people b
+  Sim    : 0.7598
+  LLM    : 5.0
+
+--------------------------------------------------------------------------------
+[15:15:14]  Step 3 — All 4 chunks scored (sim + LLM relevance)
+--------------------------------------------------------------------------------
+  Chunk (first 60 chars)                                            sim   llm
+  ----------------------------------------------------------------------------
+  [00:15:07] of the people who built it. [00:15:09] So trustwo   0.7481   5.0
+  [00:01:51] don't know, Python code. [00:01:52] We've got thr   0.7675   3.0
+  [00:00:45] Today we are digging into the blueprint for that    0.8302   8.0
+  [00:14:57] We rely on machines. [00:14:59] That's the crux o   0.8600   7.0
+
+--------------------------------------------------------------------------------
+[15:17:36]  Step 3 — Reranked by LLM relevance score
+--------------------------------------------------------------------------------
+  Reranked by LLM relevance score:
+  #    rel     sim  chunk (first 70 chars)
+  --------------------------------------------------------------------------------
+  1    8.0  0.8302  [00:00:45] Today we are digging into the blueprint for that trust. [00
+  2    7.0  0.8600  [00:14:57] We rely on machines. [00:14:59] That's the crux of it, isn'
+  3    5.0  0.7481  [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is
+  4    3.0  0.7675  [00:01:51] don't know, Python code. [00:01:52] We've got three pillars
+
+--------------------------------------------------------------------------------
+[15:18:29]  Step 3 — Combined score reranking
+--------------------------------------------------------------------------------
+  Reranked by combined score (rel - sim):
+  #    final   rel     sim  chunk (first 60 chars)
+  --------------------------------------------------------------------------------
+  1    7.170   8.0  0.8302  [00:00:45] Today we are digging into the blueprint for that 
+  2    6.140   7.0  0.8600  [00:14:57] We rely on machines. [00:14:59] That's the crux o
+  3    4.252   5.0  0.7481  [00:15:07] of the people who built it. [00:15:09] So trustwo
+  4    2.233   3.0  0.7675  [00:01:51] don't know, Python code. [00:01:52] We've got thr
+
+--------------------------------------------------------------------------------
+[15:46:59]  Step 4 — CrossEncoder loaded
+--------------------------------------------------------------------------------
+  CrossEncoder loaded: cross-encoder/ms-marco-MiniLM-L-6-v2
+
+--------------------------------------------------------------------------------
+[15:49:08]  Step 4 — CrossEncoder raw scores
+--------------------------------------------------------------------------------
+  CrossEncoder raw scores (logits):
+    +0.8494  [00:15:07] of the people who built it. [00:15:09] So trustworthy 
+    +4.3827  [00:01:51] don't know, Python code. [00:01:52] We've got three pi
+    +1.7726  [00:00:45] Today we are digging into the blueprint for that trust
+    -3.6765  [00:14:57] We rely on machines. [00:14:59] That's the crux of it,
+
+--------------------------------------------------------------------------------
+[15:51:19]  Step 4 — Results reranked by CrossEncoder
+--------------------------------------------------------------------------------
+  Reranked by CrossEncoder score:
+  #        ce   llm     sim  chunk (first 60 chars)
+  --------------------------------------------------------------------------------
+  1   +4.3827   3.0  0.7675  [00:01:51] don't know, Python code. [00:01:52] We've got thr
+  2   +1.7726   8.0  0.8302  [00:00:45] Today we are digging into the blueprint for that 
+  3   +0.8494   5.0  0.7481  [00:15:07] of the people who built it. [00:15:09] So trustwo
+  4   -3.6765   7.0  0.8600  [00:14:57] We rely on machines. [00:14:59] That's the crux o
+
+--------------------------------------------------------------------------------
+[15:52:29]  Step 4 — Baseline vs CrossEncoder order comparison
+--------------------------------------------------------------------------------
+  BASELINE ORDER (vector similarity):
+    #1  sim=0.7481  [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is
+    #2  sim=0.7675  [00:01:51] don't know, Python code. [00:01:52] We've got three pillars
+    #3  sim=0.8302  [00:00:45] Today we are digging into the blueprint for that trust. [00
+    #4  sim=0.8600  [00:14:57] We rely on machines. [00:14:59] That's the crux of it, isn'
+  
+  RERANKED ORDER (cross-encoder):
+    #1  ce=+4.3827  [00:01:51] don't know, Python code. [00:01:52] We've got three pillars
+    #2  ce=+1.7726  [00:00:45] Today we are digging into the blueprint for that trust. [00
+    #3  ce=+0.8494  [00:15:07] of the people who built it. [00:15:09] So trustworthy AI is
+    #4  ce=-3.6765  [00:14:57] We rely on machines. [00:14:59] That's the crux of it, isn'
+
+--------------------------------------------------------------------------------
+[16:01:41]  Step 4 — LLM vs CrossEncoder method comparison
+--------------------------------------------------------------------------------
+  LLM relevance order (score = 1-10 rating):
+    #1  llm= 5.0  [00:15:07] of the people who built it. [00:15:09] So trustworthy 
+    #2  llm= 3.0  [00:01:51] don't know, Python code. [00:01:52] We've got three pi
+    #3  llm= 8.0  [00:00:45] Today we are digging into the blueprint for that trust
+    #4  llm= 7.0  [00:14:57] We rely on machines. [00:14:59] That's the crux of it,
+  
+  Cross-encoder rerank order (score = raw logit):
+    #1  ce=+4.3827  [00:01:51] don't know, Python code. [00:01:52] We've got three pi
+    #2  ce=+1.7726  [00:00:45] Today we are digging into the blueprint for that trust
+    #3  ce=+0.8494  [00:15:07] of the people who built it. [00:15:09] So trustworthy 
+    #4  ce=-3.6765  [00:14:57] We rely on machines. [00:14:59] That's the crux of it,
+
+--------------------------------------------------------------------------------
+[16:18:14]  Step 5 — Baseline search without filter
+--------------------------------------------------------------------------------
+  No-filter baseline — notice mixed statuses:
+    0.5526  AI & Partners, B.V.                     status=Fully implemented
+    0.6052  Dedalus Healthcare                      status=Partially rolled-out
+    0.6131  Smals                                   status=Partially rolled-out
+    0.6248  Workday                                 status=Fully implemented
+
+--------------------------------------------------------------------------------
+[16:19:16]  Step 5 — Test queries and helper functions defined
+--------------------------------------------------------------------------------
+  Test queries defined:
+    Q1: What are the key principles of trustworthy AI?
+    Q2: What are small companies doing for AI literacy?
+    Q3: How is AI transparency being implemented in practice?
+    Q4: Which organisations have fully implemented AI literacy practices?
+
+--------------------------------------------------------------------------------
+[16:20:32]  Step 5 — run_filtered_search() defined and tested
+--------------------------------------------------------------------------------
+  Filtered (status=Fully implemented):
+    0.5526  AI & Partners, B.V.
+    0.6248  Workday
+    0.6532  Booking.com
+    0.6615  Assicurazioni Generali S.p.a.
+    0.6625  Asimov AI S.R.L.
+    0.6663  Criteo
+    0.6794  OpenSky Data Systems
+    0.6810  EnBW Energie Baden Württemberg AG
+    0.6975  TELEFÓNICA S.A.
+    0.7041  SAS
+--------------------------------------------------------------------------------
+[16:22:41]  Step 5 — smart_search() defined and tested (filter triggered)
+--------------------------------------------------------------------------------
+  smart_search — filter triggered (status=Fully implemented):
+    0.5526  AI & Partners, B.V.
+    0.6248  Workday
+    0.6532  Booking.com
+    0.6615  Assicurazioni Generali S.p.a.
+    0.6625  Asimov AI S.R.L.
+    0.6663  Criteo
+    0.6794  OpenSky Data Systems
+    0.6810  EnBW Energie Baden Württemberg AG
+    0.6975  TELEFÓNICA S.A.
+    0.7041  SAS
+
+--------------------------------------------------------------------------------
+[16:23:36]  Step 5 — smart_search test (no filter)
+--------------------------------------------------------------------------------
+  smart_search — no filter triggered:
+    0.7598  podcast  |  [00:15:07] of the people who built it. [00:15:09] So trustwo
+    0.7758  podcast  |  [00:01:51] don't know, Python code. [00:01:52] We've got thr
+    0.8459  podcast  |  [00:00:45] Today we are digging into the blueprint for that 
+    0.8705  podcast  |  [00:14:57] We rely on machines. [00:14:59] That's the crux o
+    0.8879  podcast  |  [00:01:33] It was the moment the conversation shifted from, 
+    0.8923  podcast  |  [00:03:57] Okay, let's run through them. [00:03:58] Principl
+    0.9152  podcast  |  [00:04:32] This is about the equal distribution of benefits 
+    0.9764  podcast  |  [00:03:00] It's the difference between technically legal and
+    1.0156  podcast  |  [00:09:05] if you never disclosed it. [00:09:07] Moving to r
+    1.0191  pdf — SAS  |  Company: SAS On the AI literacy approach Status: Fully imple
+
+--------------------------------------------------------------------------------
+[16:29:22]  Step 5 — All test queries through smart_search
+--------------------------------------------------------------------------------
+  ======================================================================
+  Query: What are the key principles of trustworthy AI?
+  ======================================================================
+    0.7480  podcast  |  [00:15:07] of the people who built it. [00:15:09] So trustwo
+    0.7675  podcast  |  [00:01:51] don't know, Python code. [00:01:52] We've got thr
+    0.8300  podcast  |  [00:00:45] Today we are digging into the blueprint for that 
+    0.8599  podcast  |  [00:14:57] We rely on machines. [00:14:59] That's the crux o
+    0.8795  podcast  |  [00:01:33] It was the moment the conversation shifted from, 
+    0.8879  podcast  |  [00:03:57] Okay, let's run through them. [00:03:58] Principl
+    0.9138  podcast  |  [00:04:32] This is about the equal distribution of benefits 
+    0.9775  podcast  |  [00:03:00] It's the difference between technically legal and
+    1.0112  podcast  |  [00:09:05] if you never disclosed it. [00:09:07] Moving to r
+    1.0156  pdf — SAS  |  Company: SAS On the AI literacy approach Status: Fully imple
+  
+  ======================================================================
+  Query: What are small companies doing for AI literacy?
+  ======================================================================
+    0.7715  pdf — Asimov AI S.R.L.  |  Company: Asimov AI S.R.L. On the AI literacy approach Status
+    0.7852  pdf — Smals  |  Company: Smals On the AI literacy approach Status: Partially
+    0.7886  pdf — Eyer  |  Company: Eyer On the AI literacy approach Status: Partially 
+    0.7947  pdf — Collibra B.V.  |  Company: Collibra B.V. On the AI literacy approach Status: P
+    0.8197  pdf — Booking.com  |  Company: Booking.com On the AI literacy approach Status: Ful
+    0.8246  pdf — AI & Partners, B.V.  |  Company: AI & Partners, B.V. On the AI literacy approach Sta
+    0.8313  pdf — Palantir Technologies Inc.  |  Company: Palantir Technologies Inc. On the AI literacy appro
+    0.8322  pdf — Criteo  |  Company: Criteo On the AI literacy approach Status: Fully im
+    0.8426  pdf — Dedalus Healthcare  |  Company: Dedalus Healthcare On the AI literacy approach Stat
+    0.8596  pdf — Assicurazioni Generali S.p.a.  |  Company: Assicurazioni Generali S.p.a. On the AI literacy ap
+  
+  ======================================================================
+  Query: How is AI transparency being implemented in practice?
+  ======================================================================
+    0.8346  pdf — Booking.com  |  Company: Booking.com On the AI literacy approach Status: Ful
+    0.8571  podcast  |  [00:09:05] if you never disclosed it. [00:09:07] Moving to r
+    0.8606  pdf — Workday  |  Company: Workday On the AI literacy approach Status: Fully i
+    0.8688  pdf — Eyer  |  Company: Eyer On the AI literacy approach Status: Partially 
+    0.8714  pdf — Collibra B.V.  |  Company: Collibra B.V. On the AI literacy approach Status: P
+    0.8845  podcast  |  [00:14:09] it's just too high. [00:14:10] It removes the wei
+    0.8861  pdf — Anekanta AI  |  Company: Anekanta AI On the AI literacy approach Status: Par
+    0.8968  pdf — Mural  |  Company: Mural On the AI literacy approach Status: Partially
+    0.8978  pdf — Palantir Technologies Inc.  |  Company: Palantir Technologies Inc. On the AI literacy appro
+    0.9004  pdf — Criteo  |  Company: Criteo On the AI literacy approach Status: Fully im
+  
+  ======================================================================
+  Query: Which organisations have fully implemented AI literacy practices?
+  ======================================================================
+    0.5526  pdf — AI & Partners, B.V.  |  Company: AI & Partners, B.V. On the AI literacy approach Sta
+    0.6248  pdf — Workday  |  Company: Workday On the AI literacy approach Status: Fully i
+    0.6532  pdf — Booking.com  |  Company: Booking.com On the AI literacy approach Status: Ful
+    0.6615  pdf — Assicurazioni Generali S.p.a.  |  Company: Assicurazioni Generali S.p.a. On the AI literacy ap
+    0.6625  pdf — Asimov AI S.R.L.  |  Company: Asimov AI S.R.L. On the AI literacy approach Status
+    0.6663  pdf — Criteo  |  Company: Criteo On the AI literacy approach Status: Fully im
+    0.6794  pdf — OpenSky Data Systems  |  Company: OpenSky Data Systems On the AI literacy approach St
+    0.6810  pdf — EnBW Energie Baden Württemberg AG  |  Company: EnBW Energie Baden Württemberg AG On the AI literac
+    0.6975  pdf — TELEFÓNICA S.A.  |  Company: TELEFÓNICA S.A. On the AI literacy approach Status:
+    0.7041  pdf — SAS  |  Company: SAS On the AI literacy approach Status: Fully imple
+
+
+
+--------------------------------------------------------------------------------
+[16:47:33]  Step 6 — rerank_docs() defined
+--------------------------------------------------------------------------------
+  rerank_docs() defined — ready to use
+
+--------------------------------------------------------------------------------
+[16:47:39]  Step 6 — smart_retriever() defined
+--------------------------------------------------------------------------------
+  smart_retriever() defined — ready to use
+
+--------------------------------------------------------------------------------
+[16:47:49]  Step 6 — smart_retriever() tested
+--------------------------------------------------------------------------------
+  Docs returned : 26
+  First metadata: {'section': 'ai_literacy', 'sector': 'Technology', 'headquarter': 'The Netherlands', 'size': 'Small (16-49 employees)', 'company_name': 'AI & Partners, B.V.', 'status': 'Fully implemented', 'doc_type': 'pdf'}
+
+--------------------------------------------------------------------------------
+[16:47:59]  Step 6 setup — LLM initialized
+--------------------------------------------------------------------------------
+  LLM initialized: gpt-4o-mini
+
+--------------------------------------------------------------------------------
+[16:48:05]  Step 6 — ask_rag() defined (full pipeline)
+--------------------------------------------------------------------------------
+  ask_rag() defined — full pipeline: smart_retriever → rerank_docs → LLM
+
+--------------------------------------------------------------------------------
+[16:48:15]  Step 7 — Filtered retrieval evaluation
+--------------------------------------------------------------------------------
+  Filtered retrieval (status=Fully implemented, k=20):
+    0.5527  AI & Partners, B.V.
+    0.6248  Workday
+    0.6532  Booking.com
+    0.6615  Assicurazioni Generali S.p.a.
+    0.6625  Asimov AI S.R.L.
+    0.6664  Criteo
+    0.6794  OpenSky Data Systems
+    0.6810  EnBW Energie Baden Württemberg AG
+    0.6975  TELEFÓNICA S.A.
+    0.7041  SAS
+    0.7154  IBM
+    0.7389  Fastweb S.p.A.
+    0.7759  Enzai Tehnologies
+    0.8803  AI & Partners, B.V.
+    0.9180  IBM
+    0.9530  OpenSky Data Systems
+    0.9624  TELEFÓNICA S.A.
+    0.9715  Asimov AI S.R.L.
+    1.0017  Workday
+    1.0363  Enzai Tehnologies
+
+--------------------------------------------------------------------------------
+[16:48:26]  Step 7 — Unique companies retrieved
+--------------------------------------------------------------------------------
+  Unique companies with 'Fully implemented' status (13 total):
+    AI & Partners, B.V.
+    Asimov AI S.R.L.
+    Assicurazioni Generali S.p.a.
+    Booking.com
+    Criteo
+    EnBW Energie Baden Württemberg AG
+    Enzai Tehnologies
+    Fastweb S.p.A.
+    IBM
+    OpenSky Data Systems
+    SAS
+    TELEFÓNICA S.A.
+    Workday
+
+--------------------------------------------------------------------------------
+[16:48:38]  Step 7 — ask_baseline() defined
+--------------------------------------------------------------------------------
+  ask_baseline() defined — plain vector search, no reranking
+
+--------------------------------------------------------------------------------
+[16:49:14]  Step 7 — Comparison baseline vs reranked: fully implemented organisations
+--------------------------------------------------------------------------------
+  ======================================================================
+  Query: Which organisations have fully implemented AI literacy practices?
+  ======================================================================
+  
+  --- BASELINE (plain vector search, no reranking) ---
+  The organisations that have fully implemented AI literacy practices are:
+  
+  1. AI & Partners, B.V.
+  2. Workday
+  
+  --- WITH RERANKING (smart_retriever + Cross-Encoder) ---
+  The organisations that have fully implemented AI literacy practices are:
+  
+  1. OpenSky Data Systems
+  2. IBM
+  3. Fastweb S.p.A.
+  4. EnBW Energie Baden Württemberg AG
+  5. AI & Partners, B.V.
+
+--------------------------------------------------------------------------------
+[16:50:25]  Step 7 — Comparison baseline vs reranked: key principles of trustworthy AI
+--------------------------------------------------------------------------------
+  ======================================================================
+  Query: What are the key principles of trustworthy AI?
+  ======================================================================
+  
+  --- BASELINE (plain vector search, no reranking) ---
+  The context mentions that there are three pillars, four principles, and seven concrete requirements to achieve trustworthy AI. However, it does not specify what those pillars or principles are. Therefore, the key principles of trustworthy AI are not provided in the given context.
+  
+  --- WITH RERANKING (smart_retriever + Cross-Encoder) ---
+  The key principles of trustworthy AI include three components defined in the source material, although the specific components are not listed in the provided context. However, the context mentions having three pillars, four principles, and seven concrete requirements to achieve trustworthy AI.
+
