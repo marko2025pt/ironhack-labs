@@ -1,0 +1,610 @@
+
+============================================================
+RUN: BASELINE - Original Lab Brief Prompts
+TIMESTAMP: 2026-03-01 17:20:41
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — BASELINE - Original Lab Brief Prompts
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+✅ Complaint 2 | monster         | intake → validate → investigate → resolve → close
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+✅ Complaint 5 | other           | intake → validate → investigate → resolve → close
+============================================================
+
+
+============================================================
+RUN: ITERATION 1 - Fixed 'other' category rejection
+TIMESTAMP: 2026-03-01 17:29:33
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : Complaints in the "other" category are automatically rejected and flagged for manual review.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — ITERATION 1 - Fixed 'other' category rejection
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+✅ Complaint 2 | monster         | intake → validate → investigate → resolve → close
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+❌ Complaint 5 | other           | intake → validate → reject
+============================================================
+
+
+============================================================
+RUN: FINAL TEST RUN #1
+TIMESTAMP: 2026-03-01 17:39:04
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : The complaint does not provide a description of the Demogorgons' behavior or interactions beyond their tendency to work together or fight.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : Complaints in the "other" category are automatically rejected and flagged for manual review.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — FINAL TEST RUN #1
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+❌ Complaint 2 | monster         | intake → validate → reject
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+❌ Complaint 5 | other           | intake → validate → reject
+============================================================
+
+============================================================
+RUN: ITERATION 2: Fixing Non-Determinism in Monster Validation
+TIMESTAMP: 2026-03-01 17:45:46
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : The complaint falls under the "other" category, which is always invalid and automatically rejected.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — ITERATION 2: Fixing Non-Determinism in Monster Validation
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+✅ Complaint 2 | monster         | intake → validate → investigate → resolve → close
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+❌ Complaint 5 | other           | intake → validate → reject
+============================================================
+
+============================================================
+RUN: FINAL TEST RUN #2 - With Iteration 1 & 2 Prompts
+TIMESTAMP: 2026-03-01 17:56:03
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : The complaint falls under the "other" category, which is always invalid and automatically rejected.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — FINAL TEST RUN #2 - With Iteration 1 & 2 Prompts
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+✅ Complaint 2 | monster         | intake → validate → investigate → resolve → close
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+❌ Complaint 5 | other           | intake → validate → reject
+============================================================
+
+============================================================
+RUN: FINAL RUN #3 - With All Iteration Prompts and Visualization
+TIMESTAMP: 2026-03-01 18:10:12
+============================================================
+
+
+==================================================
+🚀 RUNNING COMPLAINT 1 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 1 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : The Downside Up portal opens at different times each day. How do I predict when?
+Category   : portal
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+
+📋 FULL RESOLUTION:
+--------------------------------------------------------------------
+CONFIRMATION: The real-time monitoring system has been successfully implemented to forecast portal openings based on atmospheric pressure and local energy usage patterns.  
+SATISFACTION: We encourage you to provide feedback on the new system to ensure it meets your expectations.  
+FOLLOW_UP: no  
+OUTCOME: The resolution effectively addresses the unpredictability of portal openings, enhancing user experience and satisfaction.
+--------------------------------------------------------------------
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 2 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 2 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Demogorgons sometimes work together and sometimes fight. What's their deal?
+Category   : monster
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+
+📋 FULL RESOLUTION:
+--------------------------------------------------------------------
+CONFIRMATION: The monitoring program and habitat enrichment strategies have been successfully implemented to observe and improve Demogorgon interactions.  
+SATISFACTION: Customer feedback indicates a high level of satisfaction with the resolution and its effectiveness.  
+FOLLOW_UP: no  
+OUTCOME: The final outcome reflects a significant improvement in the social dynamics of the Demogorgons, leading to reduced conflict and enhanced cooperation.
+--------------------------------------------------------------------
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 3 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 3 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : El can move things with her mind but can't lift heavy rocks. Why?
+Category   : psychic
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+
+📋 FULL RESOLUTION:
+--------------------------------------------------------------------
+CONFIRMATION: The tailored training program focused on enhancing El's telekinetic abilities has been successfully implemented.  
+SATISFACTION: We have verified that El is satisfied with the resolution and is optimistic about her progress.  
+FOLLOW_UP: no  
+OUTCOME: The final outcome indicates that El is on a positive path to improving her telekinetic capabilities through the applied resolution.
+--------------------------------------------------------------------
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 4 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 4 SUMMARY  ✅
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : Why do creatures and power lines react so strangely together?
+Category   : environmental
+Valid      : True
+Status     : closed
+Path taken : intake → validate → investigate → resolve → close
+Effectiveness: high
+
+📋 FULL RESOLUTION:
+--------------------------------------------------------------------
+CONFIRMATION: The resolution to monitor the long-term effects of electromagnetic fields on local wildlife and establish buffer zones around power lines has been successfully applied.  
+SATISFACTION: We would appreciate your feedback on the resolution's effectiveness and any further concerns you may have.  
+FOLLOW_UP: No  
+OUTCOME: The proactive measures taken are expected to significantly improve interactions between creatures and power lines, enhancing local wildlife welfare.
+--------------------------------------------------------------------
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+==================================================
+🚀 RUNNING COMPLAINT 5 OF 5
+==================================================
+
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+📋 COMPLAINT 5 SUMMARY  ❌
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+Complaint  : This is not a valid complaint about something random
+Category   : other
+Valid      : False
+Status     : rejected
+Path taken : intake → validate → reject
+Rejected   : The complaint falls under the "other" category, which is automatically rejected and flagged for manual review.
+🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷
+
+
+============================================================
+📊 FINAL OVERVIEW — FINAL RUN #3 - With All Iteration Prompts and Visualization
+============================================================
+✅ Complaint 1 | portal          | intake → validate → investigate → resolve → close
+✅ Complaint 2 | monster         | intake → validate → investigate → resolve → close
+✅ Complaint 3 | psychic         | intake → validate → investigate → resolve → close
+✅ Complaint 4 | environmental   | intake → validate → investigate → resolve → close
+❌ Complaint 5 | other           | intake → validate → reject
+============================================================
