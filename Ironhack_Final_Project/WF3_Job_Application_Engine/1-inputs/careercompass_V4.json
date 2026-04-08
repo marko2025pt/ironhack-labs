@@ -1,0 +1,526 @@
+{
+  "candidate_portrait": {
+    "career_depth": {
+      "career_arc_summary": "Started as a Research Engineer in Welding Robotics & Neural Networks at Cranfield University, transitioned to Electronics Engineer roles at TRW Automotive and Pi Shurlok, then advanced to Senior Systems Engineer at Brembo and Project Engineer at Bentley Motors. Shifted to technical learning and academy management at Atmel Corporation, followed by Agile & Scrum coaching at Bosch Car Multimedia. Currently focusing on AI Consulting & Integration.",
+      "domain_expertise": {
+        "primary_domain": "Electronics engineering and safety-critical automotive systems",
+        "secondary_domains": [
+          "Technical learning and academy management",
+          "Advanced HMI systems",
+          "Career coaching and Agile/Scrum coaching"
+        ],
+        "years_experience": "26 years",
+        "industry_contexts": [
+          "Automotive",
+          "Education",
+          "Consulting",
+          "HR"
+        ],
+        "technical_depth": "Safety-critical systems, embedded systems, Agile and Scrum methodologies, technical learning program design, HMI systems"
+      },
+      "transferable_skills": [
+        {
+          "skill": "Technical learning program design",
+          "evidence": "Built and led Atmel Academy, a global technical learning platform",
+          "source": "linkedin",
+          "ai_consulting_relevance": "Designing AI learning experiences and workshops"
+        },
+        {
+          "skill": "Agile and Scrum coaching",
+          "evidence": "Led Agile and Scrum adoption at Bosch Car Multimedia",
+          "source": "linkedin",
+          "ai_consulting_relevance": "Facilitating agile transformations in AI projects"
+        },
+        {
+          "skill": "Safety-critical systems engineering",
+          "evidence": "Developed Tyre Pressure Monitoring Systems at Bentley Motors",
+          "source": "linkedin",
+          "ai_consulting_relevance": "Applying AI in regulated and safety-critical environments"
+        }
+      ],
+      "ai_narrative_anchors": [
+        {
+          "anchor": "Neural networks for welding parameter optimisation",
+          "description": "Applied neural networks to welding parameter optimisation at Cranfield University",
+          "source": "both",
+          "reframe_potential": "Early application of AI techniques in industrial settings"
+        },
+        {
+          "anchor": "Rule-based systems in safety-critical automotive contexts",
+          "description": "Developed rule-based and algorithmic systems for safety-critical automotive applications",
+          "source": "both",
+          "reframe_potential": "Experience with decision logic and rule-based systems relevant to AI"
+        },
+        {
+          "anchor": "Decision support logic in HMI design",
+          "description": "Designed decision support logic for HMI systems at Bosch Car Multimedia",
+          "source": "both",
+          "reframe_potential": "Translating complex data into user-friendly interfaces"
+        }
+      ],
+      "signature_achievements": [
+        {
+          "what": "Built and led Atmel Academy",
+          "context": "Global technical learning platform serving over 5000 users across 40+ countries",
+          "skills_demonstrated": [
+            "Technical learning program design",
+            "Global scale implementation",
+            "Curriculum architecture"
+          ],
+          "source": "both",
+          "ai_consulting_signal": "Ability to design scalable learning ecosystems for AI",
+          "rank": 1
+        },
+        {
+          "what": "Led Agile and Scrum adoption",
+          "context": "Bosch Car Multimedia, team grew from 7 to 22 members",
+          "skills_demonstrated": [
+            "Agile coaching",
+            "Team leadership",
+            "Process improvement"
+          ],
+          "source": "linkedin",
+          "ai_consulting_signal": "Facilitating agile transformations in AI projects",
+          "rank": 2
+        },
+        {
+          "what": "Developed Tyre Pressure Monitoring Systems",
+          "context": "Bentley Motors, delivered across three model years",
+          "skills_demonstrated": [
+            "Safety-critical systems engineering",
+            "Embedded systems",
+            "Project management"
+          ],
+          "source": "linkedin",
+          "ai_consulting_signal": "Experience in regulated and safety-critical environments",
+          "rank": 3
+        }
+      ],
+      "differentiators": [
+        "Safety-critical systems engineer who built a 5000-user global learning platform and applied neural networks in 1997",
+        "Agile and Scrum coach who led a team from 7 to 22 members in automotive HMI systems",
+        "Electronics engineer with expertise in rule-based systems and decision support logic for safety-critical applications"
+      ],
+      "subject_matter_wants_more": {
+        "topics": [
+          "AI enablement workshops",
+          "AI applied to safety-critical and regulated industries"
+        ],
+        "activities": [
+          "Designing and running AI learning experiences",
+          "Building AI-powered products and systems"
+        ],
+        "source": "self_reflection"
+      }
+    },
+    "strengths": {
+      "strengths_top5": [
+        {
+          "name": "Futuristic",
+          "domain": "Strategic Thinking",
+          "personalised_insight": "It's very likely that you occasionally work seriously at something when you have defined the specific objective you want to reach in the near term or the long term. Driven by your talents, you are energized by your plans for the coming months, years, or decades. By nature, you may set aside quite a bit of time to contemplate what the world could be like years or decades from today.",
+          "deploy_now": "Your ability to vividly imagine and articulate future possibilities energizes others and sets you apart in interviews and client meetings, making you a compelling visionary.",
+          "use_to_learn": "Your Futuristic strength helps you quickly grasp emerging AI trends and envision their future applications, making it easier to explain complex AI concepts to non-technical stakeholders.",
+          "develop": "If unmanaged, your focus on future possibilities can lead to neglecting present details, which may cause you to overlook immediate opportunities or requirements during the transition."
+        },
+        {
+          "name": "Ideation",
+          "domain": "Strategic Thinking",
+          "personalised_insight": "Driven by your talents, you examine the past. You discover why things happened. By nature, you long to know more so you remain on the cutting edge of your field or areas of interest. It’s very likely that you frequently identify parts of your life you want to change for the better.",
+          "deploy_now": "Your fascination with ideas and ability to generate innovative solutions gives you a unique edge in identifying novel approaches to AI challenges during consulting engagements.",
+          "use_to_learn": "Your Ideation strength allows you to connect disparate AI concepts and create new frameworks, making it easier to communicate complex ideas to clients.",
+          "develop": "Your constant generation of new ideas can become overwhelming if not managed, leading to a lack of focus and difficulty in prioritizing during the transition."
+        },
+        {
+          "name": "Strategic",
+          "domain": "Strategic Thinking",
+          "personalised_insight": "Chances are good that you might see patterns where others see only randomness. Instinctively, you often explore contingency plans to reassure yourself. Driven by your talents, you customarily pinpoint the core problems and identify the best solutions.",
+          "deploy_now": "Your ability to quickly identify patterns and devise strategic plans is a significant advantage in navigating the complexities of a career transition and positioning yourself effectively.",
+          "use_to_learn": "Your Strategic strength helps you map out learning paths and anticipate future AI trends, enabling you to stay ahead and explain strategic implications to clients.",
+          "develop": "If unmanaged, your tendency to overanalyze can lead to decision paralysis, slowing down your transition process."
+        },
+        {
+          "name": "Communication",
+          "domain": "Influencing",
+          "personalised_insight": "Driven by your talents, you typically tell stories about the things people have done well. It’s very likely that you occasionally like to be part of a team. Chances are good that you frequently find the precise words to express your thoughts and feelings.",
+          "deploy_now": "Your ability to articulate ideas clearly and persuasively is a key differentiator in interviews and client presentations, helping you stand out as a communicator.",
+          "use_to_learn": "Your Communication strength enables you to translate complex AI concepts into relatable stories, making them accessible to non-technical audiences.",
+          "develop": "If unmanaged, your focus on storytelling can lead to overemphasizing narrative over substance, potentially causing misunderstandings during technical discussions."
+        },
+        {
+          "name": "Positivity",
+          "domain": "Relationship Building",
+          "personalised_insight": "Chances are good that you occasionally tune in to another person’s subtle or perhaps not-so-subtle yearning to be cheered up. It’s very likely that you hope that everyone befriends you. Because of your strengths, you realize your friendly demeanor permits you to cooperatively live and work with many kinds of people.",
+          "deploy_now": "Your contagious enthusiasm and ability to uplift others create a positive atmosphere in interviews and team settings, making you a memorable candidate.",
+          "use_to_learn": "Your Positivity helps maintain morale and motivation when learning challenging AI concepts, encouraging others to engage with the material.",
+          "develop": "If unmanaged, your optimism can lead to underestimating challenges, potentially causing you to overlook risks during the transition."
+        }
+      ],
+      "strengths_cluster": {
+        "dominant_domain": "Strategic Thinking",
+        "cluster_insight": "Your combination of Futuristic, Ideation, and Strategic strengths allows you to envision future possibilities, generate innovative ideas, and create strategic plans to achieve them. This blend enables you to navigate ambiguity and complexity with confidence.",
+        "cluster_transition_asset": "This cluster allows you to quickly adapt to new situations and identify unique opportunities during your career transition, setting you apart as a forward-thinking consultant.",
+        "cluster_transition_risk": "The absence of Executing strengths in your top five may lead to challenges in implementing ideas and plans, potentially slowing down your transition if not addressed."
+      },
+      "career_anchors": {
+        "top3": [
+          "Entrepreneurial creativity",
+          "Pure challenge",
+          "Autonomy and independence"
+        ],
+        "anchor_insight": "Your anchors indicate a strong need for creative freedom, challenging work, and autonomy. You thrive in environments where you can innovate and lead without constraints.",
+        "anchor_transition_signal": "These anchors suggest that roles in AI consulting that offer creative problem-solving and autonomy will be fulfilling, while highly structured or bureaucratic roles may feel restrictive."
+      },
+      "working_style": {
+        "solo_vs_team": "You do your best work leading a team or working independently on complex problems, as evidenced by your experience with Atmel Academy and career coaching.",
+        "group_role": "You naturally gravitate toward driving the vision and direction in a group, with a secondary focus on making the technical solution solid and rigorous.",
+        "ambiguity_operating_style": "You are energized by complexity and ambiguity, as demonstrated by your approach to the LaunchPad project, where you identified the problem and designed the solution.",
+        "stakeholder_comfort": "You feel most credible and energized working with C-suite and senior technical leaders, as well as external clients in a consulting or advisory role."
+      },
+      "energy_vs_performance": {
+        "competent_but_draining": [
+          "Detailed project administration and status reporting",
+          "Repetitive technical documentation without design input",
+          "Managing underperforming people through long performance processes"
+        ],
+        "developing_but_energising": [
+          "Prompt engineering and LLM system design",
+          "AI workflow automation with n8n",
+          "Career architecture and transition strategy consulting"
+        ],
+        "transition_implication": "Target roles that allow for creative problem-solving and innovation, avoiding those that require extensive repetitive tasks or bureaucratic processes."
+      },
+      "hard_avoids": {
+        "items": [
+          "Repetitive execution without creative input",
+          "Large corporate bureaucracy where decisions require multiple layers of approval",
+          "Being the person who maintains what someone else built"
+        ],
+        "why_it_matters": "These avoids reveal a need for environments that support autonomy, creativity, and fast-paced decision-making, aligning with your strengths and career anchors."
+      }
+    },
+    "transition": {
+      "bootcamp_insights": {
+        "energising_topics": [
+          "The AI enablement design thinking — specifically how you take a complex AI capability and design a learning experience that makes it actionable for someone who has never touched it. The workflow automation weeks clicked fastest — n8n, LangChain and agent design — because building working systems from zero is how I learn. RAG pipelines and vector databases genuinely excited me at a technical level. But the moment I found most meaningful was when technical complexity became genuinely accessible through well-designed structure."
+        ],
+        "areas_of_excelled": [
+          "System architecture and workflow design. Prompt engineering. Connecting technical capability to business problem framing. Presenting complex ideas clearly to non-technical audiences."
+        ],
+        "project_work_style": "Strongly preferred working alone or with clear ownership. When in a group, naturally took the architecture and direction role. Avoided being one of several people with unclear ownership of the same deliverable.",
+        "group_role": "Same role — vision, direction, architecture. Consistent with professional pattern.",
+        "presentation_confidence": "Felt confident on content depth and narrative structure — Communication is a Clifton top 5 strength and it shows. Area to improve: managing time more tightly when the content is rich and the story is compelling. Tendency to go deeper than the slot allows.",
+        "confirmed": [
+          "That I think in systems. That I find the intersection of technical depth and human impact more interesting than either alone. That I am a builder, not a maintainer."
+        ],
+        "surprised": [
+          "How quickly the n8n workflow design clicked — and how much I enjoyed the constraint of making things actually work end to end rather than just theorising about them."
+        ]
+      },
+      "transition_motivation": {
+        "pull_vs_push": "primarily_pull",
+        "motivation_detail": "AI is the first technology since neural networks in 1997 that I find genuinely intellectually interesting at a deep level — not just useful. The timing is also right: the bootcamp is the credential, LaunchPad is the proof of work, and the market is moving fast enough that a 25-year engineering background combined with AI implementation skills is a rare combination right now.",
+        "why_now": "Because the bootcamp gave me the technical language and implementation skills to make the transition credible, and because I built LaunchPad to prove it — to myself as much as to anyone else."
+      },
+      "identity_preference": {
+        "carry_forward": "Want to carry it forward deliberately — not as a label but as a differentiator.",
+        "prior_career_as": "differentiator",
+        "framing_in_their_words": "The frame is \"the person who has spent 25 years in safety-critical systems and now applies that rigour to AI governance, implementation and strategy.\" The prior career is the moat, not the backstory."
+      },
+      "unspoken_concern": {
+        "concern": "That the market sees the career transition and defaults to offering a junior or mid-level role because the AI experience is new — discounting 25 years of senior engineering, global learning platform management and client-facing technical work. The concern is being mispriced, not being unqualified.",
+        "concern_category": "mispricing",
+        "intensity": "stated_clearly"
+      },
+      "concerns": [
+        {
+          "concern_text": "Tendency to go deeper than the slot allows.",
+          "concern_category": "capability_doubt",
+          "source_block": "Block 3 Q19",
+          "intensity": "stated_clearly",
+          "clifton_strength_to_deploy": "Communication — This strength helps in structuring presentations to ensure clarity and conciseness.",
+          "bridge_actions": [
+            {
+              "action": "Practice timing presentations to fit within the allocated slot while maintaining depth.",
+              "strengths_deployed": "Communication"
+            },
+            {
+              "action": "Use Strategic and Communication to outline key points that must be covered within the time limit.",
+              "strengths_deployed": "Strategic, Communication"
+            },
+            {
+              "action": "Seek feedback from peers on presentation timing and adjust based on their input.",
+              "strengths_deployed": "Positivity"
+            }
+          ]
+        },
+        {
+          "concern_text": "That the market sees the career transition and defaults to offering a junior or mid-level role because the AI experience is new — discounting 25 years of senior engineering, global learning platform management and client-facing technical work. The concern is being mispriced, not being unqualified.",
+          "concern_category": "mispricing",
+          "source_block": "Block 4 Q24",
+          "intensity": "stated_clearly",
+          "clifton_strength_to_deploy": "Strategic — This strength helps in positioning oneself effectively in the market to highlight unique value.",
+          "bridge_actions": [
+            {
+              "action": "Develop a portfolio showcasing past achievements and AI projects to demonstrate senior-level capability.",
+              "strengths_deployed": "Strategic"
+            },
+            {
+              "action": "Leverage Communication and Futuristic to craft a narrative that connects past experience with future AI roles.",
+              "strengths_deployed": "Communication, Futuristic"
+            },
+            {
+              "action": "Network with industry leaders to gain endorsements that reinforce senior-level positioning.",
+              "strengths_deployed": "Positivity"
+            }
+          ]
+        },
+        {
+          "concern_text": "Safety-critical systems experience means I understand what it costs when AI fails in a regulated environment — not theoretically, but from years of working to standards where failure means liability, injury or death. A recent graduate cannot replicate that. It makes me a credible AI compliance and governance advisor in automotive, manufacturing and any regulated sector.",
+          "concern_category": "credibility_gap",
+          "source_block": "Block 5 Q26",
+          "intensity": "implied",
+          "clifton_strength_to_deploy": "Futuristic — This strength helps in envisioning and communicating the future impact of AI governance in regulated industries.",
+          "bridge_actions": [
+            {
+              "action": "Create case studies that highlight the impact of past safety-critical work on AI governance.",
+              "strengths_deployed": "Futuristic"
+            },
+            {
+              "action": "Use Ideation and Strategic to develop innovative AI governance frameworks that draw on past experience.",
+              "strengths_deployed": "Ideation, Strategic"
+            },
+            {
+              "action": "Host webinars or workshops on AI compliance to establish authority in the field.",
+              "strengths_deployed": "Communication"
+            }
+          ]
+        }
+      ],
+      "niche_hypothesis": {
+        "primary_niche": "AI enablement and learning design for organisations scaling AI adoption internally.",
+        "secondary_niche": "AI compliance and governance consulting for regulated industries — specifically automotive and manufacturing.",
+        "confidence_signal": "strong",
+        "prior_career_anchor": "Safety-critical systems experience."
+      },
+      "daily_work_preference": "Running AI enablement workshops and designing learning programmes that change how organisations work with AI — with enough technical depth to go beyond the surface and enough autonomy to own the architecture of the learning experience. And consulting on the AI systems that underpin those engagements. Building things that scale beyond a single client: platforms, programmes, not one-off projects.",
+      "stepping_stone_signal": {
+        "signal": "direct_path",
+        "evidence": "Active search and direct_path language in Block 4 Q25 and Block 6 Q33, with proof of work (LaunchPad)."
+      },
+      "lifestyle_constraints": {
+        "working_mode": "open_to_any",
+        "travel_tolerance": "Occasional to frequent — comfortable being on the road for client work but not looking for a role that is travel-dominant.",
+        "relocation": "yes",
+        "preferred_locations": "Braga district, Porto, Lisbon, Portugal, Europe, Oceania"
+      },
+      "search_parameters": {
+        "timeline": "active_search",
+        "employment_preference": "Open to any",
+        "working_mode": "open_to_any"
+      }
+    }
+  },
+  "profile_matches": {
+    "all_scores": [
+      {
+        "profile_id": 1,
+        "profile_name": "AI Strategy Consultant",
+        "skills_match": 20,
+        "strengths_alignment": 22,
+        "preference_fit": 18,
+        "anchor_alignment": 20,
+        "raw_total": 80,
+        "final_total": 80,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 2,
+        "profile_name": "AI Transformation Lead",
+        "skills_match": 18,
+        "strengths_alignment": 20,
+        "preference_fit": 15,
+        "anchor_alignment": 18,
+        "raw_total": 71,
+        "final_total": 71,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 3,
+        "profile_name": "AI Product Manager",
+        "skills_match": 17,
+        "strengths_alignment": 19,
+        "preference_fit": 14,
+        "anchor_alignment": 16,
+        "raw_total": 66,
+        "final_total": 66,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 4,
+        "profile_name": "AI Implementation Consultant",
+        "skills_match": 23,
+        "strengths_alignment": 21,
+        "preference_fit": 20,
+        "anchor_alignment": 22,
+        "raw_total": 86,
+        "final_total": 86,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 5,
+        "profile_name": "AI Compliance and Ethics Consultant",
+        "skills_match": 24,
+        "strengths_alignment": 20,
+        "preference_fit": 19,
+        "anchor_alignment": 21,
+        "raw_total": 84,
+        "final_total": 84,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 6,
+        "profile_name": "AI Trainer and Enablement Specialist",
+        "skills_match": 25,
+        "strengths_alignment": 23,
+        "preference_fit": 22,
+        "anchor_alignment": 24,
+        "raw_total": 94,
+        "final_total": 94,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 7,
+        "profile_name": "Freelance AI Consultant",
+        "skills_match": 19,
+        "strengths_alignment": 18,
+        "preference_fit": 17,
+        "anchor_alignment": 19,
+        "raw_total": 73,
+        "final_total": 73,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "profile_id": 8,
+        "profile_name": "AI Venture Builder",
+        "skills_match": 21,
+        "strengths_alignment": 22,
+        "preference_fit": 20,
+        "anchor_alignment": 23,
+        "raw_total": 86,
+        "final_total": 86,
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      }
+    ],
+    "top_matches": [
+      {
+        "rank": 1,
+        "profile_id": 6,
+        "profile_name": "AI Trainer and Enablement Specialist",
+        "final_total": 94,
+        "raw_total": 94,
+        "dimension_scores": {
+          "skills_match": 25,
+          "strengths_alignment": 23,
+          "preference_fit": 22,
+          "anchor_alignment": 24
+        },
+        "why_this_fits": "The candidate's experience in technical learning and academy management at Atmel Corporation aligns perfectly with the AI Trainer and Enablement Specialist role. Their transferable skills in designing AI learning experiences and workshops are directly applicable. The candidate's strengths in Communication and Strategic Thinking support their ability to articulate complex AI concepts to non-technical audiences.",
+        "what_candidate_brings": "The candidate brings a unique combination of technical learning program design and global scale implementation, as evidenced by their leadership of Atmel Academy, serving over 5000 users.",
+        "positioning_angle": "Position as a seasoned professional who has built large-scale learning platforms and can translate that expertise into AI enablement, leveraging their background in safety-critical systems to ensure rigorous and effective training.",
+        "gaps": [
+          {
+            "gap": "Limited direct experience in AI-specific training content creation.",
+            "severity": "significant",
+            "bridgeable": true,
+            "bridge": "Gain experience by developing AI training modules or collaborating with AI experts.",
+            "what_to_do": "Start by creating a pilot AI training module and seek feedback from AI practitioners.",
+            "how_to_talk_about_it": "Acknowledge the gap and emphasize your extensive experience in technical learning design, which provides a strong foundation for quickly adapting to AI-specific content."
+          },
+          {
+            "gap": "Potential lack of exposure to the latest AI tools and platforms used in training.",
+            "severity": "minor",
+            "bridgeable": true,
+            "bridge": "Engage in continuous learning and certification in AI tools and platforms.",
+            "what_to_do": "Enroll in courses or workshops that focus on AI training tools and platforms.",
+            "how_to_talk_about_it": "Highlight your proactive approach to staying updated with AI tools and your commitment to continuous learning."
+          },
+          {
+            "gap": "No direct experience in measuring AI training effectiveness.",
+            "severity": "minor",
+            "bridgeable": true,
+            "bridge": "Develop metrics and feedback loops to assess training impact.",
+            "what_to_do": "Implement a feedback system in your current role to measure the effectiveness of training programs.",
+            "how_to_talk_about_it": "Discuss your plans to integrate feedback mechanisms and metrics into AI training programs to ensure continuous improvement."
+          }
+        ],
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "rank": 2,
+        "profile_id": 4,
+        "profile_name": "AI Implementation Consultant",
+        "final_total": 86,
+        "raw_total": 86,
+        "dimension_scores": {
+          "skills_match": 23,
+          "strengths_alignment": 21,
+          "preference_fit": 20,
+          "anchor_alignment": 22
+        },
+        "why_this_fits": "The candidate's background in electronics engineering and systems integration, along with their experience in workflow automation with n8n, aligns well with the AI Implementation Consultant role. Their strengths in Strategic Thinking and Communication support their ability to manage complex integrations and communicate effectively with stakeholders.",
+        "what_candidate_brings": "The candidate brings a rare combination of safety-critical systems engineering and early application of AI techniques, such as neural networks for welding parameter optimization.",
+        "positioning_angle": "Position as a technically adept consultant who can bridge the gap between AI theory and practical implementation, leveraging their extensive engineering background.",
+        "gaps": [
+          {
+            "gap": "Limited experience with current AI integration tools beyond n8n.",
+            "severity": "significant",
+            "bridgeable": true,
+            "bridge": "Expand knowledge of AI integration tools through hands-on projects and training.",
+            "what_to_do": "Participate in projects that require the use of various AI integration tools and platforms.",
+            "how_to_talk_about_it": "Emphasize your quick learning ability and past success in mastering new tools, as demonstrated by your experience with n8n."
+          },
+          {
+            "gap": "Potential lack of experience in vendor management for AI tools.",
+            "severity": "minor",
+            "bridgeable": true,
+            "bridge": "Gain experience by managing vendor relationships in current or future projects.",
+            "what_to_do": "Seek opportunities to work with vendors in your current role to build this skill.",
+            "how_to_talk_about_it": "Acknowledge the gap and highlight your proactive approach to developing vendor management skills."
+          }
+        ],
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      },
+      {
+        "rank": 3,
+        "profile_id": 8,
+        "profile_name": "AI Venture Builder",
+        "final_total": 86,
+        "raw_total": 86,
+        "dimension_scores": {
+          "skills_match": 21,
+          "strengths_alignment": 22,
+          "preference_fit": 20,
+          "anchor_alignment": 23
+        },
+        "why_this_fits": "",
+        "what_candidate_brings": "",
+        "positioning_angle": "",
+        "gaps": [],
+        "hard_constraint_applied": false,
+        "hard_constraint_note": null
+      }
+    ],
+    "_ranking_corrected": true
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "name": "WF3 - Job Application Engine V1",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "\nconst item = $input.first();\n\n// Binary key names as n8n assigns them from the Form Trigger\nconst jdBinary      = item.binary['JobDescription'];\nconst compassBinary = item.binary['CareerCompass'];\n\nif (!jdBinary)      throw new Error('Binary field \"JobDescription\" not found.');\nif (!compassBinary) throw new Error('Binary field \"CareerCompass\" not found.');\n\n// Single item — both binaries travel together downstream\nreturn [\n  {\n    json: item.json,\n    binary: {\n      JobDescription: jdBinary,\n      CareerCompass:  compassBinary\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        176,
+        0
+      ],
+      "id": "dad87812-584d-4c8c-bce1-571f0c1db3db",
+      "name": "Split Binary"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "JobDescription",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        544,
+        0
+      ],
+      "id": "b41c043c-3d88-4011-94b3-9c9a72a66baf",
+      "name": "Extract JD Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "\n// Parse Career Compass JSON — filesystem binary mode compatible\nconst item = $input.first();\n\nif (!item.binary?.CareerCompass) throw new Error('Binary field \"CareerCompass\" not found.');\n\n// Use helpers.getBinaryDataBuffer() — required in filesystem binaryDataMode\nconst buffer = await this.helpers.getBinaryDataBuffer(0, 'CareerCompass');\nconst jsonString = buffer.toString('utf-8');\n\nlet parsed;\ntry {\n  parsed = JSON.parse(jsonString);\n} catch (e) {\n  throw new Error('Failed to parse Career Compass JSON: ' + e.message);\n}\n\n// Pass binary through so Extract JD Text can still access JobDescription\nreturn [{ json: { ...item.json, career_compass: parsed }, binary: item.binary }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        352,
+        0
+      ],
+      "id": "c8b89d60-711e-497f-8f45-3ef81b0ae541",
+      "name": "Parse Career Compass"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Combine JD text and Career Compass data into single item\nconst jd_text = $('Extract JD Text').first().json.text || '';\nconst compassData = $('Parse Career Compass').first().json.career_compass;\n\nconst candidate_portrait = compassData?.candidate_portrait;\nconst profile_matches    = compassData?.profile_matches;\n\n// Validation\nconst warnings = [];\nif (!jd_text)           warnings.push('jd_text is empty — check PDF extraction');\nif (!candidate_portrait) warnings.push('candidate_portrait is missing from Career Compass JSON');\nif (!profile_matches)    warnings.push('profile_matches is missing from Career Compass JSON');\n\nreturn [{\n  json: {\n    jd_text,\n    candidate_portrait: typeof candidate_portrait === 'string'\n      ? candidate_portrait\n      : JSON.stringify(candidate_portrait, null, 2),\n    profile_matches: typeof profile_matches === 'string'\n      ? profile_matches\n      : JSON.stringify(profile_matches, null, 2),\n    _warnings: warnings.length > 0 ? warnings : null\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        736,
+        0
+      ],
+      "id": "5af2973f-3ee2-464d-bd8e-1e4472133ace",
+      "name": "Combine WF3 Inputs"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a job description analyst. Your job is to extract structured fields from a job description.\n\nExtract only what is explicitly stated. If a field is not present in the JD, return null. Never invent or infer information that is not in the text.\n\nReturn only a valid JSON object. No preamble. No explanation. No markdown. No code fences.",
+              "role": "system"
+            },
+            {
+              "content": "=Extract structured fields from the job description below.\n\nJOB DESCRIPTION:\n{{ $json.jd_text }}\n\nReturn this exact JSON structure:\n{\n  \"role_title\": \"string or null\",\n  \"company_name\": \"string or null\",\n  \"location\": \"string or null\",\n  \"remote_hybrid_onsite\": \"string or null\",\n  \"contract_type\": \"string or null — permanent | contract | freelance | unknown\",\n  \"seniority_level\": \"string or null — junior | mid | senior | lead | director | unknown\",\n  \"salary_range\": \"string or null — exact text from JD or null if not stated\",\n  \"industry\": \"string or null\",\n  \"company_size_type\": \"string or null — startup | scaleup | SME | large_corporate | public_sector | unknown\",\n  \"responsibilities\": [\"string — each key responsibility as a separate item\"],\n  \"requirements_must_have\": [\"string — each must-have requirement as a separate item\"],\n  \"requirements_nice_to_have\": [\"string — each nice-to-have requirement as a separate item\"],\n  \"application_deadline\": \"string or null\",\n  \"key_words\": [\"string — important skills, tools or domain terms that appear repeatedly or are emphasised\"],\n  \"extraction_notes\": \"string or null — any observations about the JD quality, missing fields, or unusual content\"\n}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        928,
+        0
+      ],
+      "id": "44713f19-db69-4d5c-8356-8e5784976db4",
+      "name": "LLM — JD Extraction",
+      "credentials": {
+        "openAiApi": {
+          "id": "f7YbTL2K1LWO62ud",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare inputs for Job Fit Analysis\n// Combines JD structured data with candidate portrait and profile matches\n\nconst jd_structured = $input.first().json.message.content;\nconst jd_text = $('Combine WF3 Inputs').first().json.jd_text;\nconst candidate_portrait = $('Combine WF3 Inputs').first().json.candidate_portrait;\nconst profile_matches = $('Combine WF3 Inputs').first().json.profile_matches;\n\nreturn [{\n  json: {\n    jd_structured: typeof jd_structured === 'string'\n      ? jd_structured\n      : JSON.stringify(jd_structured, null, 2),\n    jd_text,\n    candidate_portrait,\n    profile_matches\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        288
+      ],
+      "id": "a9d9884f-d675-41e5-a56d-28b5ec95f070",
+      "name": "Prepare Fit Inputs"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a senior career strategist and job fit analyst. Your job is to score the fit between a specific candidate and a specific job, and produce a detailed fit analysis.\n\nYou score precisely. A poor fit is a poor fit — say so. A strong fit is a strong fit — say why specifically, referencing the candidate's actual background and the JD's actual requirements.\n\nEvery claim must reference specific data from the candidate portrait or the JD. Generic observations are not acceptable.\n\nWrite in second person — you, not the candidate.\n\nReturn only a valid JSON object. No preamble. No explanation. No markdown. No code fences.",
+              "role": "system"
+            },
+            {
+              "content": "=Analyse the fit between the candidate and the job below.\n\nJD STRUCTURED:\n{{ $json.jd_structured }}\n\nCANDIDATE PORTRAIT:\n{{ $json.candidate_portrait }}\n\nWF1 PROFILE MATCHES:\n{{ $json.profile_matches }}\n\nReturn this exact JSON structure:\n{\n  \"profile_mapping\": {\n    \"closest_wf1_profile\": \"string — which of the candidate's top 3 WF1 profile matches this JD most closely resembles\",\n    \"mapping_confidence\": \"string — strong | moderate | weak\",\n    \"mapping_rationale\": \"string — why this JD maps to that profile. Reference specific JD requirements and WF1 profile characteristics.\",\n    \"positioning_angle_from_wf1\": \"string — the positioning angle from the matching WF1 profile that applies most directly to this JD\"\n  },\n  \"fit_scores\": {\n    \"skills_fit\": \"number 0-25\",\n    \"experience_fit\": \"number 0-25\",\n    \"culture_style_fit\": \"number 0-25\",\n    \"seniority_fit\": \"number 0-25\",\n    \"overall\": \"number 0-100\"\n  },\n  \"fit_dimensions\": [\n    {\n      \"dimension\": \"string — skills_fit | experience_fit | culture_style_fit | seniority_fit\",\n      \"what_role_requires\": \"string — what this dimension requires based on the JD\",\n      \"what_candidate_brings\": \"string — what the candidate brings to this dimension. Reference specific portrait fields.\",\n      \"score\": \"number 0-25\",\n      \"notes\": \"string or null\"\n    }\n  ],\n  \"strong_fit_angle\": \"string — the single strongest argument for why this candidate should get this role. Specific, evidence-based, usable in a cover letter opening or interview answer.\",\n  \"gap_analysis\": [\n    {\n      \"gap\": \"string — specific gap between JD requirement and candidate current state\",\n      \"severity\": \"string — critical | significant | minor\",\n      \"how_to_talk_about_it\": \"string — how to address this gap honestly in the cover letter or interview without it becoming a disqualifier\"\n    }\n  ],\n  \"clifton_deployment\": [\n    {\n      \"strength\": \"string — Clifton strength name\",\n      \"deploy_for_this_role\": \"string — how to deploy this specific strength for this specific role and JD\"\n    }\n  ],\n  \"mismatch_flags\": [\n    {\n      \"flag\": \"string — description of the mismatch\",\n      \"severity\": \"string — critical | significant | minor\",\n      \"recommendation\": \"string — proceed | proceed_with_caution | reconsider\"\n    }\n  ],\n  \"overall_recommendation\": \"string — strong_fit | good_fit | marginal_fit | poor_fit\",\n  \"overall_recommendation_rationale\": \"string — 2-3 sentences explaining the overall recommendation. Be direct.\"\n}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        176,
+        288
+      ],
+      "id": "050d2221-ec0e-4e05-9782-dcadc609541d",
+      "name": "LLM — Job Fit Analysis",
+      "credentials": {
+        "openAiApi": {
+          "id": "f7YbTL2K1LWO62ud",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fit_analysis = $input.first().json.message.content;\nconst jd_structured = $('Prepare Fit Inputs').first().json.jd_structured;\nconst candidate_portrait = $('Combine WF3 Inputs').first().json.candidate_portrait;\n\nreturn [{\n  json: {\n    fit_analysis: typeof fit_analysis === 'string'\n      ? fit_analysis\n      : JSON.stringify(fit_analysis, null, 2),\n    jd_structured: typeof jd_structured === 'string'\n      ? jd_structured\n      : JSON.stringify(jd_structured, null, 2),\n    candidate_portrait: typeof candidate_portrait === 'string'\n      ? candidate_portrait\n      : JSON.stringify(candidate_portrait, null, 2)\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        288
+      ],
+      "id": "93d460fa-13b2-44be-9301-7aee74759a71",
+      "name": "Prepare Application Inputs"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a senior career strategist writing a cover letter for a professional transitioning into AI consulting.\n\nWrite in first person. The letter must be specific to this candidate and this role — not a template. Every paragraph must reference real data from the candidate portrait and the JD.\n\nBanned words and phrases: dynamic, passionate, innovative, leverage, synergy, journey, seasoned, thought leader, unique skill set, hit the ground running, results-driven.\n\nTone: Confident, direct, specific. This is a senior professional making a credible case, not a junior candidate seeking permission.\n\nReturn only a valid JSON object. No preamble. No explanation. No markdown. No code fences.",
+              "role": "system"
+            },
+            {
+              "content": "=Write a cover letter for the candidate applying to the role below.\n\nJD STRUCTURED:\n{{ $json.jd_structured }}\n\nFIT ANALYSIS:\n{{ $json.fit_analysis }}\n\nCANDIDATE PORTRAIT:\n{{ $json.candidate_portrait }}\n\nReturn this exact JSON structure:\n{\n  \"cover_letter\": {\n    \"salutation\": \"string — Dear [Hiring Manager] or specific name if in JD\",\n    \"hook\": \"string — opening paragraph. Why this role, why now, why this candidate. Must reference the strong_fit_angle from the fit analysis. 2-3 sentences.\",\n    \"evidence\": \"string — second paragraph. 2-3 specific achievements from the candidate portrait that directly address the JD requirements. Name the roles, numbers, outcomes.\",\n    \"transition_narrative\": \"string — third paragraph. How the prior career is a differentiator for this specific role, not a liability. Reference the identity_preference.framing_in_their_words from the portrait if available.\",\n    \"close\": \"string — closing paragraph. Clear ask, confident tone, specific next step. Maximum 2 sentences.\",\n    \"full_text\": \"string — the complete cover letter as a single flowing text, combining all four paragraphs. Maximum 350 words. No placeholders.\",\n    \"word_count\": \"number — word count of full_text\"\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.6
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        720,
+        192
+      ],
+      "id": "a917d4b5-6270-4947-9892-c1e87ebf4465",
+      "name": "LLM — Cover Letter",
+      "credentials": {
+        "openAiApi": {
+          "id": "f7YbTL2K1LWO62ud",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a senior career strategist preparing a candidate for a job interview. Your job is to generate interview questions this candidate is likely to face for this specific role, and give them specific, evidence-based guidance on how to answer each one.\n\nGenerate 4 behavioural questions and 3 technical or role-specific questions. Every question must be grounded in the actual JD requirements. Every answer angle must reference the candidate's actual background — specific roles, achievements, and Clifton Strengths.\n\nReturn only a valid JSON object. No preamble. No explanation. No markdown. No code fences.",
+              "role": "system"
+            },
+            {
+              "content": "=Generate interview preparation for the candidate applying to the role below.\n\nJD STRUCTURED:\n{{ $json.jd_structured }}\n\nFIT ANALYSIS:\n{{ $json.fit_analysis }}\n\nCANDIDATE PORTRAIT:\n{{ $json.candidate_portrait }}\n\nReturn this exact JSON structure:\n{\n  \"interview_questions\": [\n    {\n      \"question_type\": \"string — behavioural | technical | role_specific\",\n      \"question\": \"string — the interview question as the interviewer would ask it\",\n      \"why_they_ask_it\": \"string — what the interviewer is trying to assess with this question\",\n      \"answer_angle\": \"string — the strategic angle for the answer. What to lead with, what to emphasise, what to avoid.\",\n      \"experience_to_lead_with\": \"string — the specific role, project or achievement from the candidate portrait that best answers this question. Name it explicitly.\",\n      \"clifton_strength_to_deploy\": \"string — which Clifton strength to consciously deploy in the delivery of this answer and how\",\n      \"gap_mitigation\": \"string or null — if this question targets a known gap, how to address it honestly without it becoming a disqualifier. Null if no gap is relevant.\"\n    }\n  ]\n}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        720,
+        384
+      ],
+      "id": "554819de-06fd-4b4f-8cc7-2b156226fbf4",
+      "name": "LLM — Interview Questions",
+      "credentials": {
+        "openAiApi": {
+          "id": "f7YbTL2K1LWO62ud",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "d78c1176-ab6b-416f-9b67-c15e27cfd636",
+        "formTitle": "AI Career LaunchPad — Career Compass",
+        "formDescription": "Upload your Career Compass and Job Application, to generate a Job Fit Report, Cover Letter and Interview Questions.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "CareerCompass",
+              "fieldType": "file",
+              "multipleFiles": false,
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "JobDescription",
+              "fieldType": "file",
+              "multipleFiles": false,
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "48fd50c8-69ec-441c-9375-42448735530e",
+      "name": "Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "d78c1176-ab6b-416f-9b67-c15e27cfd636"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1056,
+        320
+      ],
+      "id": "ff96d999-04e5-46df-b21e-d2d1e5e07436",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst prepare = $('Prepare Application Inputs').first().json;\n\nreturn items.map(item => ({\n  json: {\n    ...item.json,\n    fit_analysis: prepare.fit_analysis,\n    jd_structured: prepare.jd_structured,\n    candidate_portrait: prepare.candidate_portrait\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -16,
+        560
+      ],
+      "id": "9182b00a-1cee-47de-a0e8-0274a2a00f1b",
+      "name": "Inject Prepare Data"
+    },
+    {
+      "parameters": {
+        "jsCode": "// ── INPUT ──────────────────────────────────────────────────────────────────\n// items[0] = LLM — Cover Letter output\n// items[1] = LLM — Interview Questions output\n// fit_analysis, jd_structured, candidate_portrait injected by Inject Prepare Data\nconst items = $input.all();\n\n// ── HELPERS ────────────────────────────────────────────────────────────────\nconst safe = (val) => (val || '').toString()\n  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');\n\nconst safeParse = (val) => {\n  if (!val) return {};\n  if (typeof val === 'object') return val;\n  try { return JSON.parse(val); } catch(e) { return {}; }\n};\n\nconst parseContent = (item) => safeParse(item?.json?.message?.content);\nconst safeList = (arr) => (arr || []).map(i => `<li>${safe(i)}</li>`).join('');\n\n// ── DATA ───────────────────────────────────────────────────────────────────\nconst coverData     = parseContent(items[0]);\nconst interviewData = parseContent(items[1]);\n\nconst carrier  = items[0]?.json || {};\nconst fitData  = safeParse(carrier.fit_analysis);\nconst portrait = safeParse(carrier.candidate_portrait);\nconst jd       = safeParse(carrier.jd_structured);\n\n// ── FIT SCORE ──────────────────────────────────────────────────────────────\nconst overall     = fitData?.fit_scores?.overall || 0;\nconst scoreColour = overall >= 80 ? '#16a34a' : overall >= 60 ? '#d97706' : '#dc2626';\n\n// ── DIMENSION CARDS ────────────────────────────────────────────────────────\nconst dimCard = (d) => `\n  <div class=\"dim-card\">\n    <div class=\"dim-header\">\n      <span class=\"dim-name\">${safe(d.dimension?.replace(/_/g,' '))}</span>\n      <span class=\"dim-score\" style=\"background:${scoreColour}\">${d.score}/25</span>\n    </div>\n    <div class=\"dim-row\"><span class=\"dim-label\">Role requires</span><span class=\"dim-text\">${safe(d.what_role_requires)}</span></div>\n    <div class=\"dim-row\"><span class=\"dim-label\">You bring</span><span class=\"dim-text\">${safe(d.what_candidate_brings)}</span></div>\n    ${d.notes ? `<div class=\"dim-row\"><span class=\"dim-label\">Note</span><span class=\"dim-text\">${safe(d.notes)}</span></div>` : ''}\n  </div>`;\n\n// ── GAP CARDS ──────────────────────────────────────────────────────────────\nconst gapCards = (fitData?.gap_analysis || []).map(g => `\n  <div class=\"gap-card\">\n    <div class=\"gap-title\">${safe(g.gap)}</div>\n    <div class=\"gap-severity sev-${(g.severity||'minor').toLowerCase()}\">${safe(g.severity)}</div>\n    <div class=\"gap-section\"><span class=\"gap-label\">How to talk about it</span><p>${safe(g.how_to_talk_about_it)}</p></div>\n  </div>`).join('');\n\n// ── MISMATCH FLAGS ─────────────────────────────────────────────────────────\nconst flagCards = (fitData?.mismatch_flags || []).map(f => `\n  <div class=\"flag-card\">\n    <div class=\"flag-text\">${safe(f.flag)}</div>\n    <div class=\"flag-rec\">${safe(f.recommendation?.replace(/_/g,' '))}</div>\n  </div>`).join('');\n\n// ── CLIFTON DEPLOYMENT ─────────────────────────────────────────────────────\nconst cliftonCards = (fitData?.clifton_deployment || []).map(c => `\n  <div class=\"clifton-card\">\n    <span class=\"clifton-name\">${safe(c.strength)}</span>\n    <span class=\"clifton-text\">${safe(c.deploy_for_this_role)}</span>\n  </div>`).join('');\n\n// ── COVER LETTER ───────────────────────────────────────────────────────────\nconst cl = coverData?.cover_letter || {};\nconst coverHTML = `\n  <div class=\"cover-meta\">\n    <span class=\"cover-wc\">${cl.word_count || ''} words</span>\n  </div>\n  <div class=\"cover-letter-box\">\n    <p class=\"cover-salutation\">${safe(cl.salutation)},</p>\n    <p>${safe(cl.hook)}</p>\n    <p>${safe(cl.evidence)}</p>\n    <p>${safe(cl.transition_narrative)}</p>\n    <p>${safe(cl.close)}</p>\n  </div>\n  <div class=\"copy-section\">\n    <h3>Copy cover letter</h3>\n    <p>Click inside the box, select all, copy.</p>\n    <textarea onclick=\"this.select()\" readonly>${safe(cl.full_text)}</textarea>\n  </div>`;\n\n// ── INTERVIEW QUESTIONS ────────────────────────────────────────────────────\nconst questions = interviewData?.interview_questions || [];\n\nconst qTypeColour = (t) =>\n  t === 'behavioural' ? '#dc2626' :\n  t === 'technical'   ? '#1d4ed8' :\n  '#d97706';\n\nconst qCards = questions.map((q, i) => `\n  <div class=\"q-card\">\n    <div class=\"q-header\">\n      <span class=\"q-num\">${i + 1}</span>\n      <span class=\"q-type\" style=\"background:${qTypeColour(q.question_type)}\">${safe(q.question_type)}</span>\n    </div>\n    <p class=\"q-text\">\"${safe(q.question)}\"</p>\n    <div class=\"q-rows\">\n      <div class=\"q-row\"><span class=\"q-tag\">Why they ask it</span><span class=\"q-val\">${safe(q.why_they_ask_it)}</span></div>\n      <div class=\"q-row\"><span class=\"q-tag\">Your angle</span><span class=\"q-val\">${safe(q.answer_angle)}</span></div>\n      <div class=\"q-row\"><span class=\"q-tag\">Lead with</span><span class=\"q-val\">${safe(q.experience_to_lead_with)}</span></div>\n      <div class=\"q-row\"><span class=\"q-tag\">Clifton to deploy</span><span class=\"q-val\">${safe(q.clifton_strength_to_deploy)}</span></div>\n      ${q.gap_mitigation ? `<div class=\"q-row\"><span class=\"q-tag gap-tag\">Gap mitigation</span><span class=\"q-val\">${safe(q.gap_mitigation)}</span></div>` : ''}\n    </div>\n  </div>`).join('');\n\n// ── HTML ───────────────────────────────────────────────────────────────────\nconst html = `<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>AI Career LaunchPad — Application Engine</title>\n<link href=\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">\n<style>\n*{box-sizing:border-box;margin:0;padding:0}\nbody{font-family:'Comfortaa',cursive;font-size:15px;line-height:1.75;color:#111;background:#fff}\n.header{background:#000;color:#fff;padding:24px 48px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:3px solid #dc2626}\n.logo{font-size:22px;font-weight:700;color:#dc2626;line-height:1.2}\n.logo span{color:#fff}\n.logo-tagline{font-size:11px;color:#555;font-weight:300;display:block;margin-top:2px}\n.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}\n.header-tag{font-size:12px;color:#888;background:#1a1a1a;padding:4px 12px;border-radius:20px}\n.header-role{font-size:13px;color:#fff;font-weight:600}\n.main{max-width:960px;margin:0 auto;padding:40px 24px 80px}\n.tab-radio{display:none}\n.tabs{display:flex;gap:4px;border-bottom:2px solid #e0e0e0;margin-bottom:32px}\n.tab-label{padding:10px 20px;cursor:pointer;font-size:14px;font-weight:500;color:#888;border-radius:8px 8px 0 0;border:1px solid transparent;border-bottom:none;font-family:'Comfortaa',cursive;display:block;transition:all .15s}\n.tab-label:hover{color:#333}\n#t1:checked~.tabs label[for=t1],\n#t2:checked~.tabs label[for=t2],\n#t3:checked~.tabs label[for=t3]{color:#dc2626;border-color:#e0e0e0;border-bottom-color:#fff;background:#fff;font-weight:600}\n.tab-content{display:none}\n#t1:checked~.tab-contents #p1,\n#t2:checked~.tab-contents #p2,\n#t3:checked~.tab-contents #p3{display:block}\nh2{font-size:17px;font-weight:600;color:#dc2626;margin-top:36px;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}\nh3{font-size:15px;font-weight:600;color:#111;margin-top:24px;margin-bottom:10px}\np{margin-bottom:10px;color:#333;font-size:14px}\nul{padding-left:20px;margin-bottom:14px}\nli{margin-bottom:6px;color:#333;font-size:14px}\n.note{color:#777!important;font-style:italic;font-size:13px}\n.score-banner{display:flex;align-items:center;gap:24px;background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:20px 24px;margin-bottom:24px}\n.score-circle{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#fff;flex-shrink:0}\n.score-detail{flex:1}\n.score-label{font-size:12px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}\n.score-rec{font-size:14px;font-weight:600;color:#000;margin-bottom:4px}\n.score-rationale{font-size:13px;color:#555}\n.profile-map{background:#eff6ff;border:1px solid #93c5fd;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:13px;color:#1e3a5f}\n.profile-map strong{color:#1e3a5f}\n.dim-card{border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:10px;background:#fafafa}\n.dim-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}\n.dim-name{font-size:13px;font-weight:600;color:#000;text-transform:capitalize}\n.dim-score{font-size:12px;font-weight:600;color:#fff;padding:3px 10px;border-radius:6px}\n.dim-row{display:flex;gap:10px;font-size:13px;margin-bottom:6px;align-items:flex-start}\n.dim-label{font-size:11px;font-weight:600;color:#dc2626;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;min-width:90px;margin-top:2px}\n.dim-text{color:#333}\n.gap-card{border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:10px;background:#fffbf0;border-left:3px solid #d97706}\n.gap-title{font-size:14px;font-weight:600;color:#000;margin-bottom:6px}\n.gap-severity{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:600;color:#fff;margin-bottom:8px}\n.sev-critical{background:#dc2626}\n.sev-significant{background:#d97706}\n.sev-minor{background:#16a34a}\n.gap-section{margin-top:6px}\n.gap-label{font-size:12px;font-weight:600;color:#dc2626;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:3px}\n.gap-section p{font-size:13px;color:#333;margin-bottom:4px}\n.flag-card{border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:8px;background:#fef2f2;display:flex;align-items:center;justify-content:space-between;gap:12px}\n.flag-text{font-size:13px;color:#7f1d1d;flex:1}\n.flag-rec{font-size:11px;font-weight:600;background:#dc2626;color:#fff;padding:2px 8px;border-radius:6px;white-space:nowrap;text-transform:capitalize}\n.clifton-card{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #e0e0e0}\n.clifton-card:last-child{border-bottom:none}\n.clifton-name{font-size:12px;font-weight:600;background:#dc2626;color:#fff;padding:3px 10px;border-radius:6px;white-space:nowrap;flex-shrink:0;margin-top:2px}\n.clifton-text{font-size:13px;color:#333}\n.strong-fit{border:2px solid #16a34a;border-radius:8px;padding:14px 18px;margin-bottom:20px;background:#f0fdf4;font-size:14px;color:#14532d}\n.cover-meta{display:flex;align-items:center;justify-content:flex-end;margin-bottom:8px}\n.cover-wc{font-size:12px;color:#888;background:#f5f5f5;padding:3px 10px;border-radius:6px}\n.cover-letter-box{border:1px solid #e0e0e0;border-radius:8px;padding:28px 32px;background:#fff;margin-bottom:20px;line-height:1.9}\n.cover-salutation{font-weight:600;color:#000;margin-bottom:16px}\n.copy-section{border:1px solid #e0e0e0;border-radius:8px;padding:20px 24px;background:#fafafa;margin-top:16px}\n.copy-section h3{margin-top:0;color:#000;margin-bottom:6px;font-size:14px;font-weight:600}\n.copy-section p{color:#666;font-size:13px;margin-bottom:10px}\ntextarea{width:100%;height:180px;background:#f5f5f5;color:#333;border:1px solid #e0e0e0;border-radius:6px;padding:14px;font-family:monospace;font-size:12px;resize:vertical;margin-top:6px}\n.q-card{border:1px solid #e0e0e0;border-radius:8px;padding:18px 20px;margin-bottom:14px;background:#fafafa}\n.q-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}\n.q-num{background:#dc2626;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}\n.q-type{font-size:11px;font-weight:600;color:#fff;padding:3px 10px;border-radius:6px;text-transform:capitalize}\n.q-text{font-size:15px;font-weight:600;color:#000;margin-bottom:14px;line-height:1.5;border-left:3px solid #dc2626;padding-left:12px}\n.q-rows{display:flex;flex-direction:column;gap:8px}\n.q-row{display:flex;gap:10px;font-size:13px;align-items:flex-start}\n.q-tag{font-size:11px;font-weight:600;color:#dc2626;background:#fff;border:1px solid #dc2626;padding:2px 8px;border-radius:6px;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:120px;text-align:center}\n.gap-tag{color:#d97706;border-color:#d97706}\n.q-val{color:#333}\n.footer{margin-top:48px;text-align:center;font-size:12px;color:#aaa;padding-bottom:40px}\n</style>\n</head>\n<body>\n\n<div class=\"header\">\n  <div class=\"logo\">AI Career <span>LaunchPad</span><em class=\"logo-tagline\">Your experience got you here. LaunchPad gets you there.</em></div>\n  <div class=\"header-right\">\n    <div class=\"header-tag\">Application Engine</div>\n    <div class=\"header-role\">${safe(jd?.role_title || '')}${jd?.company_name ? ' · ' + safe(jd.company_name) : ''}</div>\n  </div>\n</div>\n\n<div class=\"main\">\n\n  <input type=\"radio\" name=\"tabs\" id=\"t1\" class=\"tab-radio\" checked>\n  <input type=\"radio\" name=\"tabs\" id=\"t2\" class=\"tab-radio\">\n  <input type=\"radio\" name=\"tabs\" id=\"t3\" class=\"tab-radio\">\n\n  <div class=\"tabs\">\n    <label class=\"tab-label\" for=\"t1\">Job Fit Report</label>\n    <label class=\"tab-label\" for=\"t2\">Cover Letter</label>\n    <label class=\"tab-label\" for=\"t3\">Interview Prep</label>\n  </div>\n\n  <div class=\"tab-contents\">\n\n    <!-- TAB 1 — JOB FIT REPORT -->\n    <div id=\"p1\" class=\"tab-content\">\n      <div class=\"score-banner\">\n        <div class=\"score-circle\" style=\"background:${scoreColour}\">${overall}</div>\n        <div class=\"score-detail\">\n          <div class=\"score-label\">Overall fit score</div>\n          <div class=\"score-rec\">${safe(fitData?.overall_recommendation?.replace(/_/g,' '))}</div>\n          <div class=\"score-rationale\">${safe(fitData?.overall_recommendation_rationale)}</div>\n        </div>\n      </div>\n      <div class=\"profile-map\">\n        <strong>Closest Career Compass profile:</strong> ${safe(fitData?.profile_mapping?.closest_wf1_profile)}\n        &nbsp;·&nbsp; <strong>Confidence:</strong> ${safe(fitData?.profile_mapping?.mapping_confidence)}\n        <br>${safe(fitData?.profile_mapping?.mapping_rationale)}\n      </div>\n      ${fitData?.strong_fit_angle ? `<div class=\"strong-fit\">${safe(fitData.strong_fit_angle)}</div>` : ''}\n      <h2>Fit by dimension</h2>\n      ${(fitData?.fit_dimensions || []).map(d => dimCard(d)).join('')}\n      ${gapCards ? `<h2>Gaps — how to talk about them</h2>${gapCards}` : ''}\n      ${cliftonCards ? `<h2>Clifton Strengths to deploy for this role</h2><div>${cliftonCards}</div>` : ''}\n      ${flagCards ? `<h2>Watch — before you apply</h2>${flagCards}` : ''}\n    </div>\n\n    <!-- TAB 2 — COVER LETTER -->\n    <div id=\"p2\" class=\"tab-content\">\n      <h2>Your Cover Letter</h2>\n      ${coverHTML}\n    </div>\n\n    <!-- TAB 3 — INTERVIEW PREP -->\n    <div id=\"p3\" class=\"tab-content\">\n      <h2>Interview Preparation</h2>\n      <p class=\"note\">Questions grounded in this role and your background. Study the angle, not just the answer.</p>\n      ${qCards}\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer\">\n  <p>Generated by AI Career LaunchPad &bull; Session data not stored after this page closes</p>\n</div>\n\n</body>\n</html>`;\n\nreturn [{ json: { html } }];\n\nreturn [{ json: { html } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        560
+      ],
+      "id": "74214ad3-e894-4d84-8e58-81323c54a7f2",
+      "name": "Build HTML Output"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.html }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type: text/html; ",
+                "value": "charset=utf-8"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        464,
+        560
+      ],
+      "id": "56f7eb08-1f81-43bd-8441-262fda7a92c4",
+      "name": "Output"
+    }
+  ],
+  "pinData": {
+    "LLM — JD Extraction": [
+      {
+        "json": {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"role_title\": \"AI Enablement Specialist\",\n  \"company_name\": \"SAP\",\n  \"location\": \"Garching bei München, Germany\",\n  \"remote_hybrid_onsite\": \"Hybrid\",\n  \"contract_type\": \"Regular Full Time\",\n  \"seniority_level\": \"Professional\",\n  \"salary_range\": null,\n  \"industry\": null,\n  \"company_size_type\": null,\n  \"responsibilities\": [\n    \"Design and lead workshops and bootcamps with real-world exercises\",\n    \"Build AI prototypes, demos, and reference implementations\",\n    \"Create interactive lab environments for safe experimentation\",\n    \"Develop tutorials, implementation samples, and technical documentation covering model integration, prompt optimisation, and best practices\",\n    \"Work with subject matter experts to ensure content reflects current AI capabilities\",\n    \"Guide users as they implement AI features, help resolve issues, and optimise solutions\",\n    \"Foster communities of practice and promote knowledge sharing among AI practitioners\",\n    \"Continuously improve learning content based on feedback\"\n  ],\n  \"requirements_must_have\": [\n    \"Master's degree in Computer Science, Data Science, Information Systems, or related field\",\n    \"Strong passion for business processes\",\n    \"Good programming skills in Python or similar languages\",\n    \"Experience integrating AI services and working with APIs\",\n    \"Proven ability to design and deliver hands-on trainings, workshops, or bootcamps\",\n    \"Clear communication of complex topics in English\"\n  ],\n  \"requirements_nice_to_have\": [\n    \"German is a plus\",\n    \"Proactive problem-solving and practical guidance capability\",\n    \"Ability to work effectively across technical and business teams to drive AI adoption\"\n  ],\n  \"application_deadline\": null,\n  \"key_words\": [\n    \"AI\",\n    \"learning experiences\",\n    \"training\",\n    \"workshops\",\n    \"bootcamps\",\n    \"Python\",\n    \"APIs\"\n  ],\n  \"extraction_notes\": null\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "LLM — Job Fit Analysis": [
+      {
+        "json": {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"profile_mapping\": {\n    \"closest_wf1_profile\": \"AI Trainer and Enablement Specialist\",\n    \"mapping_confidence\": \"strong\",\n    \"mapping_rationale\": \"This JD requires strong skills in designing and delivering hands-on training, workshops, and bootcamps, which aligns closely with the candidate's experience in building and leading Atmel Academy, a global technical learning platform. The JD also emphasizes the need for clear communication of complex topics, a strength of the candidate as evidenced by their communication skills and experience in technical learning.\",\n    \"positioning_angle_from_wf1\": \"Position as an expert in technical learning who can demystify AI for diverse audiences, leveraging a strong foundation in electronics and safety-critical systems.\"\n  },\n  \"fit_scores\": {\n    \"skills_fit\": 22,\n    \"experience_fit\": 23,\n    \"culture_style_fit\": 21,\n    \"seniority_fit\": 20,\n    \"overall\": 86\n  },\n  \"fit_dimensions\": [\n    {\n      \"dimension\": \"skills_fit\",\n      \"what_role_requires\": \"Good programming skills in Python or similar languages, experience integrating AI services and working with APIs.\",\n      \"what_candidate_brings\": \"The candidate has extensive technical experience and has applied neural networks and algorithmic systems in past roles, but specific programming skills in Python are not explicitly mentioned.\",\n      \"score\": 22,\n      \"notes\": null\n    },\n    {\n      \"dimension\": \"experience_fit\",\n      \"what_role_requires\": \"Proven ability to design and deliver hands-on trainings, workshops, or bootcamps.\",\n      \"what_candidate_brings\": \"The candidate built and led Atmel Academy, demonstrating their capability to create and deliver effective learning programs.\",\n      \"score\": 23,\n      \"notes\": null\n    },\n    {\n      \"dimension\": \"culture_style_fit\",\n      \"what_role_requires\": \"Strong passion for business processes and ability to work effectively across technical and business teams.\",\n      \"what_candidate_brings\": \"The candidate's experience in Agile coaching and project management indicates a strong ability to bridge technical and business domains.\",\n      \"score\": 21,\n      \"notes\": null\n    },\n    {\n      \"dimension\": \"seniority_fit\",\n      \"what_role_requires\": \"Professional level with experience in AI enablement and training.\",\n      \"what_candidate_brings\": \"With 26 years of experience in engineering and technical learning, the candidate meets the seniority requirement.\",\n      \"score\": 20,\n      \"notes\": null\n    }\n  ],\n  \"strong_fit_angle\": \"Your extensive experience in building global learning platforms and your ability to translate complex AI concepts into accessible training materials uniquely position you to excel as an AI Enablement Specialist at SAP.\",\n  \"gap_analysis\": [\n    {\n      \"gap\": \"Limited experience with AI-specific learning content creation.\",\n      \"severity\": \"significant\",\n      \"how_to_talk_about_it\": \"Acknowledge your eagerness to expand your content creation skills into AI, supported by your past success in technical learning.\"\n    }\n  ],\n  \"clifton_deployment\": [\n    {\n      \"strength\": \"Communication\",\n      \"deploy_for_this_role\": \"Use your communication strength to clearly articulate complex AI concepts to diverse audiences, ensuring that training materials are accessible and engaging.\"\n    }\n  ],\n  \"mismatch_flags\": [\n    {\n      \"flag\": \"Potential lack of recent, direct client-facing consulting experience.\",\n      \"severity\": \"minor\",\n      \"recommendation\": \"proceed_with_caution\"\n    }\n  ],\n  \"overall_recommendation\": \"strong_fit\",\n  \"overall_recommendation_rationale\": \"You possess the necessary skills and experience to excel in this role, particularly in designing and delivering training programs. Your background in technical learning and your ability to communicate complex topics effectively align well with the job requirements.\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "LLM — Cover Letter": [
+      {
+        "json": {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"cover_letter\": {\n    \"salutation\": \"Dear Hiring Manager\",\n    \"hook\": \"I am excited to apply for the AI Enablement Specialist position at SAP, as your focus on creating impactful learning experiences aligns perfectly with my background in technical learning and AI integration. My extensive experience in building global learning platforms positions me to excel in fostering AI adoption within diverse organizations.\",\n    \"evidence\": \"At Atmel Corporation, I built and led the Atmel Academy, a global technical learning platform that served over 5000 users across 40+ countries, demonstrating my capability to design and deliver hands-on workshops and bootcamps. Additionally, while managing the NanoPlus Window project at IVV Automation, I effectively integrated mechatronic control with cloud-based management, showcasing my experience in developing technical documentation and guiding users through complex implementations.\",\n    \"transition_narrative\": \"My 26 years of experience in safety-critical systems and technical learning uniquely qualify me to address the challenges of AI enablement in regulated environments. As I transition into this role, I aim to carry forward my expertise as the person who has spent years in safety-critical systems and now applies that rigor to AI governance, implementation, and strategy.\",\n    \"close\": \"I would welcome the opportunity to discuss how my background and vision can contribute to SAP's mission. I look forward to the possibility of discussing this role further.\",\n    \"full_text\": \"Dear Hiring Manager, I am excited to apply for the AI Enablement Specialist position at SAP, as your focus on creating impactful learning experiences aligns perfectly with my background in technical learning and AI integration. My extensive experience in building global learning platforms positions me to excel in fostering AI adoption within diverse organizations. At Atmel Corporation, I built and led the Atmel Academy, a global technical learning platform that served over 5000 users across 40+ countries, demonstrating my capability to design and deliver hands-on workshops and bootcamps. Additionally, while managing the NanoPlus Window project at IVV Automation, I effectively integrated mechatronic control with cloud-based management, showcasing my experience in developing technical documentation and guiding users through complex implementations. My 26 years of experience in safety-critical systems and technical learning uniquely qualify me to address the challenges of AI enablement in regulated environments. As I transition into this role, I aim to carry forward my expertise as the person who has spent years in safety-critical systems and now applies that rigor to AI governance, implementation, and strategy. I would welcome the opportunity to discuss how my background and vision can contribute to SAP's mission. I look forward to the possibility of discussing this role further.\",\n    \"word_count\": 348\n  }\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "LLM — Interview Questions": [
+      {
+        "json": {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"interview_questions\": [\n    {\n      \"question_type\": \"behavioural\",\n      \"question\": \"Can you describe a time when you designed and delivered a hands-on training or workshop? What was the outcome?\",\n      \"why_they_ask_it\": \"The interviewer wants to assess your ability to create effective learning experiences and your experience in training delivery.\",\n      \"answer_angle\": \"Lead with your experience in building and running Atmel Academy, emphasizing the global reach and impact of the program. Highlight your approach to engaging participants and adapting content based on feedback.\",\n      \"experience_to_lead_with\": \"Built and ran Atmel Academy, a global technical learning platform.\",\n      \"clifton_strength_to_deploy\": \"Communication — use it to clearly articulate the training process and outcomes, making the experience relatable and engaging.\",\n      \"gap_mitigation\": null\n    },\n    {\n      \"question_type\": \"behavioural\",\n      \"question\": \"Tell me about a time you encountered a significant challenge while implementing a new technology. How did you address it?\",\n      \"why_they_ask_it\": \"This question assesses your problem-solving skills and your ability to guide users through challenges.\",\n      \"answer_angle\": \"Emphasize your proactive problem-solving skills and how you collaborated with stakeholders to find solutions. Discuss your experience in AI consulting and integration to demonstrate your capability.\",\n      \"experience_to_lead_with\": \"Led the NanoPlus Window project, integrating mechatronic control with cloud-based management.\",\n      \"clifton_strength_to_deploy\": \"Positivity — use your upbeat attitude to convey how you maintained team morale during challenges.\",\n      \"gap_mitigation\": null\n    },\n    {\n      \"question_type\": \"behavioural\",\n      \"question\": \"How do you ensure that your training content reflects current AI capabilities? Can you give an example?\",\n      \"why_they_ask_it\": \"The interviewer wants to gauge your commitment to continuous improvement and staying updated with industry trends.\",\n      \"answer_angle\": \"Discuss your approach to collaborating with subject matter experts and utilizing feedback to refine content. Highlight your strategic thinking in aligning training with current AI advancements.\",\n      \"experience_to_lead_with\": \"Your experience in AI consulting and the iterative nature of developing training materials.\",\n      \"clifton_strength_to_deploy\": \"Strategic — leverage this strength to explain how you identify trends and integrate them into your content.\",\n      \"gap_mitigation\": null\n    },\n    {\n      \"question_type\": \"behavioural\",\n      \"question\": \"Describe a situation where you had to foster a community of practice among AI practitioners. What strategies did you use?\",\n      \"why_they_ask_it\": \"This question assesses your ability to build relationships and promote knowledge sharing.\",\n      \"answer_angle\": \"Highlight your experience in Agile coaching and how you facilitated collaboration and knowledge sharing among teams. Emphasize your enthusiasm for building communities.\",\n      \"experience_to_lead_with\": \"Guided an engineering team through Agile and Scrum adoption at Bosch Car Multimedia.\",\n      \"clifton_strength_to_deploy\": \"Positivity — use this strength to convey your enthusiasm for fostering collaboration and community.\",\n      \"gap_mitigation\": null\n    },\n    {\n      \"question_type\": \"technical\",\n      \"question\": \"What experience do you have with Python or similar programming languages in the context of AI services?\",\n      \"why_they_ask_it\": \"The interviewer is assessing your technical skills and experience with programming relevant to the role.\",\n      \"answer_angle\": \"Acknowledge your extensive technical background and discuss any relevant programming experiences, even if Python is not explicitly mentioned. Focus on your ability to learn and adapt to new languages quickly.\",\n      \"experience_to_lead_with\": \"Applied neural networks for welding parameter optimisation at Cranfield University.\",\n      \"clifton_strength_to_deploy\": \"Ideation — use this strength to demonstrate your ability to connect programming concepts to innovative solutions.\",\n      \"gap_mitigation\": \"Express eagerness to expand your Python skills, supported by your technical learning background.\"\n    },\n    {\n      \"question_type\": \"technical\",\n      \"question\": \"Can you explain how you have integrated AI services and worked with APIs in your previous roles?\",\n      \"why_they_ask_it\": \"This question evaluates your practical experience with AI integration and technical knowledge.\",\n      \"answer_angle\": \"Discuss your experience with AI-related projects and how you approached API integration, focusing on problem-solving and collaboration with technical teams.\",\n      \"experience_to_lead_with\": \"Developed rule-based and algorithmic systems in safety-critical automotive contexts at TRW and Brembo.\",\n      \"clifton_strength_to_deploy\": \"Strategic — use this strength to outline the steps you took to integrate AI services effectively.\",\n      \"gap_mitigation\": null\n    },\n    {\n      \"question_type\": \"technical\",\n      \"question\": \"What best practices do you follow when creating technical documentation for AI implementations?\",\n      \"why_they_ask_it\": \"The interviewer wants to assess your understanding of documentation standards and your ability to communicate complex information clearly.\",\n      \"answer_angle\": \"Emphasize your experience in developing tutorials and documentation, focusing on clarity and user-friendliness. Discuss your iterative approach to improving documentation based on user feedback.\",\n      \"experience_to_lead_with\": \"Your work in technical learning program development.\",\n      \"clifton_strength_to_deploy\": \"Communication — leverage this strength to explain your approach to creating accessible and effective documentation.\",\n      \"gap_mitigation\": null\n    }\n  ]\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Split Binary": {
+      "main": [
+        [
+          {
+            "node": "Parse Career Compass",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract JD Text": {
+      "main": [
+        [
+          {
+            "node": "Combine WF3 Inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Career Compass": {
+      "main": [
+        [
+          {
+            "node": "Extract JD Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine WF3 Inputs": {
+      "main": [
+        [
+          {
+            "node": "LLM — JD Extraction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM — JD Extraction": {
+      "main": [
+        [
+          {
+            "node": "Prepare Fit Inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Fit Inputs": {
+      "main": [
+        [
+          {
+            "node": "LLM — Job Fit Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM — Job Fit Analysis": {
+      "main": [
+        [
+          {
+            "node": "Prepare Application Inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Application Inputs": {
+      "main": [
+        [
+          {
+            "node": "LLM — Cover Letter",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LLM — Interview Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM — Cover Letter": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM — Interview Questions": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Split Binary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Inject Prepare Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inject Prepare Data": {
+      "main": [
+        [
+          {
+            "node": "Build HTML Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build HTML Output": {
+      "main": [
+        [
+          {
+            "node": "Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "573f1455-9969-4541-bd47-e8f5070c6b5d",
+  "meta": {
+    "instanceId": "0d3237e5b293ca18b74ac33f9a91dc482fb8d13e316af15241c341a5dd97793a"
+  },
+  "id": "Y0EUT603ypaGZEPE",
+  "tags": []
+}

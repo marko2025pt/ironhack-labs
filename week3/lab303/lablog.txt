@@ -11,3 +11,6 @@
 2026-02-25 19:07:45 - INFO - Loaded 0 resource(s)
 2026-02-25 19:14:24 - INFO - Testing MCP-enabled agent...
 
+2026-02-27 13:18:53 - INFO - MCP client configured for LangChain documentation server
+2026-02-27 13:18:53 - INFO - Server: langchain-docs → https://docs.langchain.com/mcp
+2026-02-27 13:19:04 - INFO -   - SearchDocsByLangChain: Search across the Docs by LangChain knowledge base to find relevant information,...

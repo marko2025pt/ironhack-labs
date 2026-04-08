@@ -1,0 +1,115 @@
+{
+  "name": "Telegram to Airtable Logger",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": ["message"],
+        "additionalFields": {}
+      },
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "credentials": {
+        "telegramApi": {
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "name": "Timestamp",
+              "value": "={{ $now }}",
+              "type": "string"
+            },
+            {
+              "name": "Client Name",
+              "value": "={{ $json.message.from.first_name }}",
+              "type": "string"
+            },
+            {
+              "name": "Chat ID",
+              "value": "={{ $json.message.chat.id }}",
+              "type": "string"
+            },
+            {
+              "name": "Question",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            },
+            {
+              "name": "Status",
+              "value": "New",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "value": "appiPyZYFJR2NrEZ6",
+          "mode": "id"
+        },
+        "table": {
+          "value": "tbls1SQMrx1Kb4Bx1",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ $json.Timestamp }}",
+            "Client Name": "={{ $json['Client Name'] }}",
+            "Chat ID": "={{ $json['Chat ID'] }}",
+            "Question": "={{ $json.Question }}",
+            "Status": "={{ $json.Status }}"
+          }
+        },
+        "options": {}
+      },
+      "name": "Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2,
+      "position": [750, 300],
+      "credentials": {
+        "airtableTokenApi": {
+          "name": "Airtable Token"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
